@@ -18,7 +18,7 @@ export const MenuContainer = styled.menu``;
 export const MenuItem = styled.span``;
 
 export const MenuItemLink = styled(Link)`
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
 
     text-decoration: none;

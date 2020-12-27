@@ -1,6 +1,3 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-    flex: 1;
-    background: #7159c1;
-`;
+export const Container = styled.div``;

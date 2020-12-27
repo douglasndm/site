@@ -1,7 +1,11 @@
 import React from 'react';
 
 import {
-  Container, LogoText, MenuContainer, MenuItem, MenuItemLink,
+    Container,
+    LogoText,
+    MenuContainer,
+    MenuItem,
+    MenuItemLink,
 } from './styles';
 
 const Header: React.FC = () => (
