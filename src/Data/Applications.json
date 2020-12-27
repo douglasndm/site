@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Controle de Validade",
+        "description": "O melhor aplicativo para reduzir as perdas do seu negócio!",
+        "logo": "./Assets/Images/Apps/controledevalidade.png",
+        "AppStore": "",
+        "GooglePlay": "",
+        "MSStore": ""
+    },
+    {
+        "name": "Tabuada",
+        "description": "Aprender a tabuada nunca foi tão fácil.",
+        "logo": "./Assets/Images/Apps/tabuada.png",
+        "AppStore": "",
+        "GooglePlay": "",
+        "MSStore": ""
+    }
+]

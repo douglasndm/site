@@ -1,5 +1,7 @@
 import React from 'react';
 
+import apps from '../../Data/Applications.json';
+
 import Header from '../../Components/Header';
 import AppItem from '../../Components/AppItem';
 
@@ -9,7 +11,13 @@ const Home: React.FC = () => (
     <Container>
         <Header />
 
-        <AppItem />
+        <ul>
+            {apps.map((app: IApp) => (
+                <li key={app.name}>
+                    <AppItem App={app} />
+                </li>
+            ))}
+        </ul>
     </Container>
 );
 
