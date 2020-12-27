@@ -2,6 +2,7 @@ import React from 'react';
 
 import {
     Container,
+    HeaderContainer,
     LogoText,
     MenuContainer,
     MenuItem,
@@ -10,16 +11,18 @@ import {
 
 const Header: React.FC = () => (
     <Container>
-        <LogoText>douglasndm apps</LogoText>
+        <HeaderContainer>
+            <LogoText>douglasndm apps</LogoText>
 
-        <MenuContainer>
-            <MenuItem>
-                <MenuItemLink to="/">apps</MenuItemLink>
-            </MenuItem>
-            <MenuItem>
-                <MenuItemLink to="/privacy">privacy</MenuItemLink>
-            </MenuItem>
-        </MenuContainer>
+            <MenuContainer>
+                <MenuItem>
+                    <MenuItemLink to="/">apps</MenuItemLink>
+                </MenuItem>
+                <MenuItem>
+                    <MenuItemLink to="/privacy">privacy</MenuItemLink>
+                </MenuItem>
+            </MenuContainer>
+        </HeaderContainer>
     </Container>
 );
 
