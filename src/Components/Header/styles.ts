@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const Container = styled.div`
-    position: fixed;
+interface HeaderProps {
+    fixed?: boolean;
+}
+
+export const Container = styled.div<HeaderProps>`
+    position: ${(props) => (props.fixed === false ? 'absolute' : 'fixed')};
     width: 100vw;
 `;
 

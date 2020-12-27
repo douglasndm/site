@@ -10,8 +10,12 @@ import {
     MenuItemLinkExternal,
 } from './styles';
 
-const Header: React.FC = () => (
-    <Container>
+interface HeaderProps {
+    fixed?: boolean;
+}
+
+const Header: React.FC<HeaderProps> = ({ fixed }: HeaderProps) => (
+    <Container fixed={fixed}>
         <HeaderContainer>
             <LogoText>douglasndm apps</LogoText>
 

@@ -36,15 +36,22 @@ const AppItem: React.FC<Props> = ({ App, borderRadius }: Props) => {
                     </TextContainer>
 
                     <StoreButtonsContainer>
-                        <a href={MSStore}>
-                            <ButtonDownload_MicrosoftStore />
-                        </a>
-                        <a href={AppStore}>
-                            <ButtonDownload_AppStore />
-                        </a>
-                        <a href={GooglePlay}>
-                            <ButtonDownload_GooglePlay />
-                        </a>
+                        {!!MSStore && (
+                            <a href={MSStore}>
+                                <ButtonDownload_MicrosoftStore />
+                            </a>
+                        )}
+
+                        {!!AppStore && (
+                            <a href={AppStore}>
+                                <ButtonDownload_AppStore />
+                            </a>
+                        )}
+                        {!!GooglePlay && (
+                            <a href={GooglePlay}>
+                                <ButtonDownload_GooglePlay />
+                            </a>
+                        )}
                     </StoreButtonsContainer>
                 </DescriptionContainer>
             </AppContainer>
