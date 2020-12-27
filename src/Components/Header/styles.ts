@@ -34,3 +34,18 @@ export const MenuItemLink = styled(Link)`
         margin-left: 30px;
     }
 `;
+
+export const MenuItemLinkExternal = styled.a.attrs(() => ({
+    target: '_blank',
+}))`
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+
+    text-decoration: none;
+    font-size: 23px;
+    color: white;
+
+    :first-child {
+        margin-left: 30px;
+    }
+`;

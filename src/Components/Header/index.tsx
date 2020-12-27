@@ -7,6 +7,7 @@ import {
     MenuContainer,
     MenuItem,
     MenuItemLink,
+    MenuItemLinkExternal,
 } from './styles';
 
 const Header: React.FC = () => (
@@ -19,7 +20,17 @@ const Header: React.FC = () => (
                     <MenuItemLink to="/">apps</MenuItemLink>
                 </MenuItem>
                 <MenuItem>
-                    <MenuItemLink to="/privacy">privacy</MenuItemLink>
+                    <MenuItemLink to="/privacy">privacidade</MenuItemLink>
+                </MenuItem>
+                <MenuItem>
+                    <MenuItemLinkExternal href="https://www.linkedin.com/in/douglasndm/">
+                        linkedin
+                    </MenuItemLinkExternal>
+                </MenuItem>
+                <MenuItem>
+                    <MenuItemLinkExternal href="https://github.com/douglasndm">
+                        github
+                    </MenuItemLinkExternal>
                 </MenuItem>
             </MenuContainer>
         </HeaderContainer>
