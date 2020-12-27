@@ -22,6 +22,16 @@ export const Container = styled.div<ContainerProps>`
 export const AppContainer = styled.div`
     display: flex;
     width: 80vw;
+
+    @media (max-width: 1000px) {
+        width: 100vw;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (max-width: 1250px) {
+        width: 95vw;
+    }
 `;
 
 interface LogoProps {
@@ -33,10 +43,18 @@ export const AppLogo = styled.img<LogoProps>`
     height: 350px;
     border-radius: ${(props) => (props.borderRadius ? '50%' : 0)};
     margin-right: 5%;
+
+    @media (max-width: 1300px) {
+        margin-right: 2%;
+    }
 `;
 
 export const TextContainer = styled.div`
     width: 100%;
+
+    @media (max-width: 1000px) {
+        width: 90%;
+    }
 `;
 
 export const DescriptionContainer = styled.div`
@@ -60,16 +78,29 @@ export const AppTitle = styled.h2<TextProps>`
     font-weight: normal;
 
     color: ${(props) => props.color};
+
+    @media (max-width: 1000px) {
+        text-align: center;
+    }
 `;
 
 export const AppDescription = styled.p<TextProps>`
     color: ${(props) => props.color};
+
+    @media (max-width: 1000px) {
+        text-align: center;
+    }
 `;
 
 export const StoreButtonsContainer = styled.div`
     margin-top: 2%;
     align-items: center;
     display: flex;
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        margin-top: 5%;
+    }
 `;
 
 export const ButtonDownload_MicrosoftStore = styled.img.attrs(() => ({
@@ -78,6 +109,10 @@ export const ButtonDownload_MicrosoftStore = styled.img.attrs(() => ({
     width: 200px;
     height: 75px;
     margin-right: 20px;
+
+    @media (max-width: 1000px) {
+        margin-right: 0;
+    }
 `;
 
 export const ButtonDownload_AppStore = styled.img.attrs(() => ({
@@ -86,6 +121,10 @@ export const ButtonDownload_AppStore = styled.img.attrs(() => ({
     width: 200px;
     height: 75px;
     margin-right: 20px;
+
+    @media (max-width: 1000px) {
+        margin-right: 0;
+    }
 `;
 
 export const ButtonDownload_GooglePlay = styled.img.attrs(() => ({

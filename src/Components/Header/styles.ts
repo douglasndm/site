@@ -11,11 +11,20 @@ export const HeaderContainer = styled.header`
     justify-content: space-between;
 
     padding: 4% 6%;
+
+    @media (max-width: 800px) {
+        padding: 10px;
+        justify-content: center;
+    }
 `;
 
 export const LogoText = styled.h1`
     font-family: 'Roboto', sans-serif;
     color: white;
+
+    @media (max-width: 800px) {
+        display: none;
+    }
 `;
 
 export const MenuContainer = styled.menu``;
