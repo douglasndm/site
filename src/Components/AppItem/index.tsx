@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import {
     Container,
@@ -37,15 +36,15 @@ const AppItem: React.FC<Props> = ({ App, borderRadius }: Props) => {
                     </TextContainer>
 
                     <StoreButtonsContainer>
-                        <Link to={MSStore}>
+                        <a href={MSStore}>
                             <ButtonDownload_MicrosoftStore />
-                        </Link>
-                        <Link to={AppStore}>
+                        </a>
+                        <a href={AppStore}>
                             <ButtonDownload_AppStore />
-                        </Link>
-                        <Link to={GooglePlay}>
+                        </a>
+                        <a href={GooglePlay}>
                             <ButtonDownload_GooglePlay />
-                        </Link>
+                        </a>
                     </StoreButtonsContainer>
                 </DescriptionContainer>
             </AppContainer>
