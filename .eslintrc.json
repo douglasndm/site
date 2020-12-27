@@ -28,6 +28,7 @@
     "rules": {
         "prettier/prettier": "error",
         "camelcase": "off",
+        "react/require-default-props": "off",
         "react/jsx-indent" : ["error", 4],
         "react/jsx-pascal-case": "off",
         "react-hooks/rules-of-hooks": "error",
@@ -42,6 +43,10 @@
               "tsx": "never"
             }
         ],
+
+        "no-unused-vars": "warn",
+        "react/prop-types": "warn",
+        "react/no-unused-prop-types": "warn",
 
         "no-use-before-define": "off",
         "@typescript-eslint/no-use-before-define": ["error"]

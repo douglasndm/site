@@ -4,15 +4,29 @@
         "description": "O melhor aplicativo para reduzir as perdas do seu negócio!",
         "logo": "./Assets/Images/Apps/controledevalidade.png",
         "AppStore": "",
-        "GooglePlay": "",
-        "MSStore": ""
+        "GooglePlay": "https://play.google.com/store/apps/details?id=com.controledevalidade",
+        "MSStore": "",
+        "backgroundColor": "#14d48f",
+        "textColor": "#FFFFFF"
     },
     {
         "name": "Tabuada",
         "description": "Aprender a tabuada nunca foi tão fácil.",
         "logo": "./Assets/Images/Apps/tabuada.png",
         "AppStore": "",
+        "GooglePlay": "https://play.google.com/store/apps/details?id=com.rntabuada",
+        "MSStore": "https://www.microsoft.com/store/apps/9WZDNCRDXD7H",
+        "backgroundColor": "#00bfff",
+        "textColor": "#fff"
+    },
+    {
+        "name": "Jogo da velha para duas pessoas",
+        "description": "Divirta-se com seus amigos",
+        "logo": "./Assets/Images/Apps/jogodavelha.png",
+        "AppStore": "",
         "GooglePlay": "",
-        "MSStore": ""
+        "MSStore": "https://www.microsoft.com/store/apps/9WZDNCRCSMPN",
+        "backgroundColor": "#818181",
+        "textColor": "#fff"
     }
 ]

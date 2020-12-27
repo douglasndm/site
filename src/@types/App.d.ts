@@ -5,4 +5,7 @@ interface IApp {
     AppStore: string;
     GooglePlay: string;
     MSStore: string;
+
+    backgroundColor: string;
+    textColor: string;
 }

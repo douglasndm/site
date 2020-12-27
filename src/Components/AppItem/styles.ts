@@ -4,10 +4,14 @@ import MSStoreButton from '../../Assets/Images/Stores/MicrosoftStore/Portuguese-
 import AppStoreButton from '../../Assets/Images/Stores/AppStore/PT-BR/Dark.svg';
 import GooglePlayButton from '../../Assets/Images/Stores/GooglePlay/google-play-badge.png';
 
-export const Container = styled.div`
+interface ContainerProps {
+    background: string;
+}
+
+export const Container = styled.div<ContainerProps>`
     display: flex;
     flex: 1;
-    background-color: #7159c1;
+    background-color: ${(props) => props.background};
 
     height: 100vh;
 
@@ -20,10 +24,14 @@ export const AppContainer = styled.div`
     width: 80vw;
 `;
 
-export const AppLogo = styled.img`
+interface LogoProps {
+    borderRadius?: boolean;
+}
+
+export const AppLogo = styled.img<LogoProps>`
     width: 350px;
     height: 350px;
-    border-radius: 50%;
+    border-radius: ${(props) => (props.borderRadius ? '50%' : 0)};
     margin-right: 5%;
 `;
 
@@ -42,13 +50,21 @@ export const DescriptionContainer = styled.div`
     justify-content: center;
 `;
 
-export const AppTitle = styled.h2`
+interface TextProps {
+    color: string;
+}
+
+export const AppTitle = styled.h2<TextProps>`
     font-size: 42px;
     color: white;
     font-weight: normal;
+
+    color: ${(props) => props.color};
 `;
 
-export const AppDescription = styled.p``;
+export const AppDescription = styled.p<TextProps>`
+    color: ${(props) => props.color};
+`;
 
 export const StoreButtonsContainer = styled.div`
     margin-top: 2%;

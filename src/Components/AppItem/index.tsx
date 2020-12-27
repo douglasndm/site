@@ -17,20 +17,23 @@ import {
 
 interface Props {
     App: IApp;
+    borderRadius?: boolean;
 }
 
-const AppItem: React.FC<Props> = ({ App }: Props) => {
+const AppItem: React.FC<Props> = ({ App, borderRadius }: Props) => {
     const { name, logo, description, MSStore, AppStore, GooglePlay } = App;
 
     return (
-        <Container>
+        <Container background={App.backgroundColor}>
             <AppContainer>
-                <AppLogo src={logo} />
+                <AppLogo src={logo} borderRadius={borderRadius} />
 
                 <DescriptionContainer>
                     <TextContainer>
-                        <AppTitle>{name}</AppTitle>
-                        <AppDescription>{description}</AppDescription>
+                        <AppTitle color={App.textColor}>{name}</AppTitle>
+                        <AppDescription color={App.textColor}>
+                            {description}
+                        </AppDescription>
                     </TextContainer>
 
                     <StoreButtonsContainer>
