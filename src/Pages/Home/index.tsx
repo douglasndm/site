@@ -1,7 +1,13 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import Header from '../../Components/Header';
 
-const Home: React.FC = () => <div />;
+import { Container } from './styles';
+
+const Home: React.FC = () => (
+    <Container>
+        <Header />
+    </Container>
+);
 
 export default Home;
