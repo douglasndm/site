@@ -6,7 +6,10 @@
     "extends": [
         "plugin:react/recommended",
         "airbnb",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "prettier",
+        "prettier/react"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -19,10 +22,14 @@
     "plugins": [
         "react",
         "@typescript-eslint",
+        "prettier",
         "react-hooks"
     ],
     "rules": {
+        "prettier/prettier": "error",
+        "camelcase": "off",
         "react/jsx-indent" : ["error", 4],
+        "react/jsx-pascal-case": "off",
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
         "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
