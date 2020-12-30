@@ -17,7 +17,8 @@ export const HeaderContainer = styled.header`
     padding: 4% 6%;
 
     @media (max-width: 800px) {
-        padding: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         justify-content: center;
     }
 `;
@@ -33,7 +34,11 @@ export const LogoText = styled.h1`
 
 export const MenuContainer = styled.menu``;
 
-export const MenuItem = styled.span``;
+export const MenuItem = styled.span`
+    :first-child {
+        margin-right: 30px;
+    }
+`;
 
 export const MenuItemLink = styled(Link)`
     font-family: 'Roboto', sans-serif;
@@ -42,10 +47,6 @@ export const MenuItemLink = styled(Link)`
     text-decoration: none;
     font-size: 23px;
     color: white;
-
-    :first-child {
-        margin-left: 30px;
-    }
 `;
 
 export const MenuItemLinkExternal = styled.a.attrs(() => ({

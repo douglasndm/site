@@ -4,8 +4,9 @@ import apps from '../../Data/Applications.json';
 
 import Header from '../../Components/Header';
 import AppItem from '../../Components/AppItem';
+import Footer from '../../Components/Footer';
 
-import { Container } from './styles';
+import { Container, ListItem } from './styles';
 
 const Home: React.FC = () => (
     <Container>
@@ -13,11 +14,12 @@ const Home: React.FC = () => (
 
         <ul>
             {apps.map((app: IApp) => (
-                <li key={app.name}>
+                <ListItem key={app.name}>
                     <AppItem App={app} />
-                </li>
+                </ListItem>
             ))}
         </ul>
+        <Footer />
     </Container>
 );
 
