@@ -18,6 +18,7 @@ export const HeaderContainer = styled.header`
 
     @media (max-width: 800px) {
         padding-top: 20px;
+        padding-bottom: 20px;
         justify-content: center;
     }
 `;
