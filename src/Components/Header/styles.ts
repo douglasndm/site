@@ -38,6 +38,23 @@ export const MenuItem = styled.span`
     :first-child {
         margin-right: 30px;
     }
+
+    & + & {
+        margin-right: 30px;
+    }
+
+    @media (max-width: 600px) {
+        :first-child {
+            margin-right: 10px;
+        }
+        & + & {
+            margin-right: 10px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        margin-right: 25px;
+    }
 `;
 
 export const MenuItemLink = styled(Link)`
@@ -58,8 +75,4 @@ export const MenuItemLinkExternal = styled.a.attrs(() => ({
     text-decoration: none;
     font-size: 23px;
     color: white;
-
-    :first-child {
-        margin-left: 30px;
-    }
 `;
