@@ -4,6 +4,7 @@ import apps from '../../Data/Applications.json';
 
 import Header from '../../Components/Header';
 import AppItem from '../../Components/AppItem';
+import Footer from '../../Components/Footer';
 
 import { Container, ListItem } from './styles';
 
@@ -18,6 +19,7 @@ const Home: React.FC = () => (
                 </ListItem>
             ))}
         </ul>
+        <Footer />
     </Container>
 );
 
