@@ -3,7 +3,7 @@
         "name": "Controle de Validade",
         "description": "O melhor aplicativo para reduzir as perdas do seu negócio!",
         "logo": "./Assets/Images/Apps/controledevalidade.png",
-        "AppStore": "",
+        "AppStore": "https://apps.apple.com/us/app/controle-de-validade/id1549418617",
         "GooglePlay": "https://play.google.com/store/apps/details?id=com.controledevalidade",
         "MSStore": "",
         "backgroundColor": "#14d48f",
