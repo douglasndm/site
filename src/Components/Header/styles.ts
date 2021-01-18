@@ -21,6 +21,10 @@ export const HeaderContainer = styled.header`
         padding-bottom: 20px;
         justify-content: center;
     }
+    @media (max-width: 1000px) and (max-height: 600px) {
+        justify-content: center;
+        padding-top: 2%;
+    }
 `;
 
 export const LogoText = styled.h1`
@@ -28,6 +32,9 @@ export const LogoText = styled.h1`
     color: white;
 
     @media (max-width: 800px) {
+        display: none;
+    }
+    @media (max-width: 1000px) and (max-height: 600px) {
         display: none;
     }
 `;
