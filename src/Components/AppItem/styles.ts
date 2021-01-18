@@ -32,6 +32,13 @@ export const AppContainer = styled.div`
     @media (max-width: 1250px) {
         width: 95vw;
     }
+
+    @media (max-width: 1000px) and (max-height: 600px) {
+        width: 100vw;
+        padding-top: 5%;
+        flex-direction: row;
+        justify-content: center;
+    }
 `;
 
 interface LogoProps {
@@ -47,6 +54,10 @@ export const AppLogo = styled.img<LogoProps>`
     @media (max-width: 1300px) {
         margin-right: 2%;
     }
+    @media (max-width: 1000px) and (max-height: 600px) {
+        width: 240px;
+        height: 240px;
+    }
 `;
 
 export const TextContainer = styled.div`
@@ -60,7 +71,7 @@ export const TextContainer = styled.div`
 export const DescriptionContainer = styled.div`
     color: white;
     font-size: 18px;
-    flex: 1;
+
     display: flex;
 
     flex-direction: column;
@@ -100,6 +111,10 @@ export const StoreButtonsContainer = styled.div`
     @media (max-width: 1000px) {
         flex-direction: column;
         margin-top: 5%;
+    }
+
+    @media (max-width: 1000px) and (max-height: 600px) {
+        flex-direction: row;
     }
 `;
 
