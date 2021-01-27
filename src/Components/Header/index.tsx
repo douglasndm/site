@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = ({ fixed }: HeaderProps) => (
                     <MenuItemLink to="/privacy">privacidade</MenuItemLink>
                 </MenuItem>
                 <MenuItem>
-                    <MenuItemLink to="/terms">termos de uso</MenuItemLink>
+                    <MenuItemLink to="/terms">termos</MenuItemLink>
                 </MenuItem>
                 <MenuItem>
                     <MenuItemLinkExternal href="https://www.linkedin.com/in/douglasndm/">
