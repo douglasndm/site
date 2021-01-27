@@ -8,23 +8,22 @@ interface HeaderProps {
 export const Container = styled.div<HeaderProps>`
     position: ${(props) => (props.fixed === false ? 'absolute' : 'fixed')};
     width: 100vw;
+
+    padding: 4% 6%;
+
+    @media (max-width: 800px) {
+        padding: 20px 0;
+        justify-content: center;
+    }
+    @media (max-width: 1000px) and (max-height: 600px) {
+        justify-content: center;
+        padding: 2% 0 0 0;
+    }
 `;
 
 export const HeaderContainer = styled.header`
     display: flex;
     justify-content: space-between;
-
-    padding: 4% 6%;
-
-    @media (max-width: 800px) {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        justify-content: center;
-    }
-    @media (max-width: 1000px) and (max-height: 600px) {
-        justify-content: center;
-        padding-top: 2%;
-    }
 `;
 
 export const LogoText = styled.h1`
@@ -39,7 +38,12 @@ export const LogoText = styled.h1`
     }
 `;
 
-export const MenuContainer = styled.menu``;
+export const MenuContainer = styled.menu`
+    @media (max-width: 1000px) {
+        flex: 1;
+        text-align: center;
+    }
+`;
 
 export const MenuItem = styled.span`
     :first-child {
