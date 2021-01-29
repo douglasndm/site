@@ -13,7 +13,7 @@
         "name": "Tabuada",
         "description": "Aprender a tabuada nunca foi tão fácil.",
         "logo": "./Assets/Images/Apps/tabuada.png",
-        "AppStore": "",
+        "AppStore": "https://apps.apple.com/us/app/aprenda-a-tabuada/id1550514551",
         "GooglePlay": "https://play.google.com/store/apps/details?id=com.rntabuada",
         "MSStore": "https://www.microsoft.com/store/apps/9WZDNCRDXD7H",
         "backgroundColor": "#00bfff",
