@@ -34,7 +34,7 @@ const Header: React.FC<HeaderProps> = ({ fixed }: HeaderProps) => (
                         linkedin
                     </MenuItemLinkExternal>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem className="canCollapse">
                     <MenuItemLinkExternal href="https://github.com/douglasndm">
                         github
                     </MenuItemLinkExternal>

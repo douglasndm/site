@@ -24,6 +24,12 @@ export const Container = styled.div<HeaderProps>`
 export const HeaderContainer = styled.header`
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 450px) {
+        .canCollapse {
+            display: none;
+        }
+    }
 `;
 
 export const LogoText = styled.h1`
