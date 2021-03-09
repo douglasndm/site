@@ -23,7 +23,7 @@ export const AppContainer = styled.div`
     display: flex;
     width: 80vw;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 800px) {
         width: 100vw;
         flex-direction: column;
         align-items: center;
@@ -33,7 +33,7 @@ export const AppContainer = styled.div`
         width: 95vw;
     }
 
-    @media (max-width: 1000px) and (max-height: 600px) {
+    @media (max-width: 800px) and (max-height: 600px) {
         width: 100vw;
         padding-top: 5%;
         flex-direction: row;
@@ -58,6 +58,16 @@ export const AppLogo = styled.img<LogoProps>`
         width: 240px;
         height: 240px;
     }
+
+    @media (max-width: 800px) {
+        width: 215px;
+        height: 215px;
+    }
+
+    @media (max-width: 600px) {
+        width: 200px;
+        height: 200px;
+    }
 `;
 
 export const TextContainer = styled.div`
@@ -77,6 +87,7 @@ export const DescriptionContainer = styled.div`
     flex-direction: column;
 
     justify-content: center;
+    align-items: center;
 `;
 
 interface TextProps {
@@ -128,6 +139,11 @@ export const ButtonDownload_MicrosoftStore = styled.img.attrs(() => ({
     @media (max-width: 1000px) {
         margin-right: 0;
     }
+
+    @media (max-width: 600px) {
+        width: 150px;
+        height: 50px;
+    }
 `;
 
 export const ButtonDownload_AppStore = styled.img.attrs(() => ({
@@ -140,6 +156,11 @@ export const ButtonDownload_AppStore = styled.img.attrs(() => ({
     @media (max-width: 1000px) {
         margin-right: 0;
     }
+
+    @media (max-width: 600px) {
+        width: 150px;
+        height: 50px;
+    }
 `;
 
 export const ButtonDownload_GooglePlay = styled.img.attrs(() => ({
@@ -147,4 +168,9 @@ export const ButtonDownload_GooglePlay = styled.img.attrs(() => ({
 }))`
     width: 200px;
     height: 90px;
+
+    @media (max-width: 600px) {
+        width: 150px;
+        height: 75px;
+    }
 `;

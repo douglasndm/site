@@ -1,5 +1,6 @@
 [
     {
+        "id": "d86c7b0c-9fb3-44f4-9f87-527beb7fafd5",
         "name": "Controle de Validade",
         "description": "O melhor aplicativo para reduzir as perdas do seu negócio!",
         "logo": "./Assets/Images/Apps/controledevalidade.png",
@@ -10,6 +11,7 @@
         "textColor": "#FFFFFF"
     },
     {
+        "id": "b2c132c2-4c57-45bf-8916-877c897b9514",
         "name": "Tabuada",
         "description": "Aprender a tabuada nunca foi tão fácil.",
         "logo": "./Assets/Images/Apps/tabuada.png",
@@ -20,6 +22,7 @@
         "textColor": "#fff"
     },
     {
+        "id": "27f7b6de-b4b7-4753-b37e-2e9773ca35e4",
         "name": "Jogo da velha para duas pessoas",
         "description": "Divirta-se com seus amigos.",
         "logo": "./Assets/Images/Apps/jogodavelha.png",
