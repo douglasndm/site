@@ -99,6 +99,8 @@ export const AppTitle = styled.h2<TextProps>`
     color: white;
     font-weight: normal;
 
+    font-family: 'Roboto Condensed', sans-serif;
+
     color: ${(props) => props.color};
 
     @media (max-width: 1000px) {
@@ -108,6 +110,7 @@ export const AppTitle = styled.h2<TextProps>`
 
 export const AppDescription = styled.p<TextProps>`
     color: ${(props) => props.color};
+    font-family: 'Open Sans', sans-serif;
 
     @media (max-width: 1000px) {
         text-align: center;
