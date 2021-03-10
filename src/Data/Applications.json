@@ -40,7 +40,7 @@
         "AppStore": "",
         "GooglePlay": "",
         "MSStore": "https://www.microsoft.com/store/apps/9WZDNCRCSMPN",
-        "backgroundColor": "#818181",
+        "backgroundColor": "#4f4f4f",
         "textColor": "#fff"
     }
 ]
