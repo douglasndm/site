@@ -169,7 +169,7 @@ export const ButtonDownload_AppStore = styled.img.attrs(() => ({
 export const ButtonDownload_GooglePlay = styled.img.attrs(() => ({
     src: GooglePlayButton,
 }))`
-    width: 200px;
+    width: 220px;
     height: 90px;
 
     @media (max-width: 600px) {
