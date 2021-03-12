@@ -5,7 +5,7 @@
         "description": "O quanto você consegue correr?",
         "logo": "./Assets/Images/Apps/keeprunning.png",
         "AppStore": "",
-        "GooglePlay": "",
+        "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.keeprunning",
         "MSStore": "",
         "backgroundColor": "#8918cc",
         "textColor": "#EAEAEA"
