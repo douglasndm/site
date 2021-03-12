@@ -1,5 +1,16 @@
 [
     {
+        "id": "61647567-a665-4a56-880c-71fce01eea72",
+        "name": "Keep Running",
+        "description": "O quanto você consegue correr?",
+        "logo": "./Assets/Images/Apps/keeprunning.png",
+        "AppStore": "",
+        "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.keeprunning",
+        "MSStore": "",
+        "backgroundColor": "#8918cc",
+        "textColor": "#EAEAEA"
+    },
+    {
         "id": "d86c7b0c-9fb3-44f4-9f87-527beb7fafd5",
         "name": "Controle de Validade",
         "description": "O melhor aplicativo para reduzir as perdas do seu negócio!",
@@ -29,7 +40,7 @@
         "AppStore": "",
         "GooglePlay": "",
         "MSStore": "https://www.microsoft.com/store/apps/9WZDNCRCSMPN",
-        "backgroundColor": "#818181",
+        "backgroundColor": "#4f4f4f",
         "textColor": "#fff"
     }
 ]

@@ -3,14 +3,14 @@ import styled from 'styled-components';
 export const Container = styled.footer`
     display: flex;
     justify-content: center;
-    background-color: #dcdcdc;
+    background-color: rgba(0, 0, 0, 0.8);
 
     padding: 7px;
 `;
 
 export const Text = styled.span`
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 
     font-size: 18px;
-    color: #606060;
+    color: #fff;
 `;
