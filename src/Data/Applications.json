@@ -4,7 +4,7 @@
         "name": "Keep Running",
         "description": "O quanto você consegue correr?",
         "logo": "./Assets/Images/Apps/keeprunning.png",
-        "AppStore": "",
+        "AppStore": "https://apps.apple.com/us/app/just-keep-running/id1555891738",
         "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.keeprunning",
         "MSStore": "",
         "backgroundColor": "#8918cc",
