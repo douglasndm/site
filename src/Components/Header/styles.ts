@@ -19,6 +19,15 @@ export const Container = styled.div<HeaderProps>`
         justify-content: center;
         padding: 2% 0 0 0;
     }
+
+    @media (max-width: 900px) {
+        justify-content: center;
+        padding: 4% 3%;
+    }
+
+    @media (max-width: 290px) {
+        display: none;
+    }
 `;
 
 export const HeaderContainer = styled.header`
@@ -36,9 +45,13 @@ export const LogoText = styled.h1`
     font-family: 'Roboto', sans-serif;
     color: white;
 
-    @media (max-width: 800px) {
+    @media (max-width: 1000px) {
+        font-size: 26px;
+    }
+    @media (max-width: 900px) {
         display: none;
     }
+
     @media (max-width: 1000px) and (max-height: 600px) {
         display: none;
     }
@@ -48,6 +61,10 @@ export const MenuContainer = styled.menu`
     @media (max-width: 1000px) {
         flex: 1;
         text-align: center;
+    }
+
+    @media (max-height: 500px) {
+        margin-top: 2%;
     }
 `;
 
@@ -60,6 +77,10 @@ export const MenuItem = styled.span`
         margin-right: 30px;
     }
 
+    @media (max-width: 900px) {
+        margin-right: 25px;
+    }
+
     @media (max-width: 600px) {
         :first-child {
             margin-right: 10px;
@@ -67,10 +88,6 @@ export const MenuItem = styled.span`
         & + & {
             margin-right: 10px;
         }
-    }
-
-    @media (max-width: 900px) {
-        margin-right: 25px;
     }
 `;
 
@@ -81,6 +98,10 @@ export const MenuItemLink = styled(Link)`
     text-decoration: none;
     font-size: 23px;
     color: white;
+
+    @media (max-width: 600px) {
+        font-size: 18px;
+    }
 `;
 
 export const MenuItemLinkExternal = styled.a.attrs(() => ({
@@ -92,4 +113,8 @@ export const MenuItemLinkExternal = styled.a.attrs(() => ({
     text-decoration: none;
     font-size: 23px;
     color: white;
+
+    @media (max-width: 600px) {
+        font-size: 18px;
+    }
 `;

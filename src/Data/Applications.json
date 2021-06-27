@@ -1,14 +1,14 @@
 [
     {
-        "id": "61647567-a665-4a56-880c-71fce01eea72",
-        "name": "Keep Running",
-        "description": "O quanto você consegue correr?",
-        "logo": "./Assets/Images/Apps/keeprunning.png",
-        "AppStore": "https://apps.apple.com/us/app/just-keep-running/id1555891738",
-        "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.keeprunning",
+        "id": "d130b6f1-85a6-446c-a842-8583ee0219bd",
+        "name": "Controle de Validades Times (EM TESTES)",
+        "description": "O melhor aplicativo de validade que você já conheçe agora sincronizado os dados entre seu time",
+        "logo": "./Assets/Images/Apps/teams.png",
+        "AppStore": "",
+        "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.expirychecker.business",
         "MSStore": "",
-        "backgroundColor": "#8918cc",
-        "textColor": "#EAEAEA"
+        "backgroundColor": "#5856d6",
+        "textColor": "#FFFFFF"
     },
     {
         "id": "d86c7b0c-9fb3-44f4-9f87-527beb7fafd5",
@@ -20,6 +20,17 @@
         "MSStore": "",
         "backgroundColor": "#14d48f",
         "textColor": "#FFFFFF"
+    },
+    {
+        "id": "61647567-a665-4a56-880c-71fce01eea72",
+        "name": "Keep Running",
+        "description": "O quanto você consegue correr?",
+        "logo": "./Assets/Images/Apps/keeprunning.png",
+        "AppStore": "https://apps.apple.com/us/app/just-keep-running/id1555891738",
+        "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.keeprunning",
+        "MSStore": "",
+        "backgroundColor": "#8918cc",
+        "textColor": "#EAEAEA"
     },
     {
         "id": "b2c132c2-4c57-45bf-8916-877c897b9514",
