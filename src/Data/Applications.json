@@ -1,11 +1,11 @@
 [
     {
         "id": "d130b6f1-85a6-446c-a842-8583ee0219bd",
-        "name": "Controle de Validades para Times",
+        "name": "Controle de Validades Times (EM TESTES)",
         "description": "O melhor aplicativo de validade que você já conheçe agora sincronizado os dados entre seu time",
         "logo": "./Assets/Images/Apps/teams.png",
         "AppStore": "",
-        "GooglePlay": "",
+        "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.expirychecker.business",
         "MSStore": "",
         "backgroundColor": "#5856d6",
         "textColor": "#FFFFFF"
