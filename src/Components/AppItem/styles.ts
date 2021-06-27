@@ -23,21 +23,24 @@ export const AppContainer = styled.div`
     display: flex;
     width: 80vw;
 
-    @media (max-width: 800px) {
-        width: 100vw;
-        flex-direction: column;
-        align-items: center;
-    }
-
     @media (max-width: 1250px) {
         width: 95vw;
     }
 
-    @media (max-width: 800px) and (max-height: 600px) {
+    @media (max-width: 800px) {
         width: 100vw;
         padding-top: 5%;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
+    }
+
+    @media (max-width: 800px) and (max-height: 500px) {
+        flex-direction: row;
+    }
+
+    @media (max-width: 400px) {
+        flex-direction: column;
     }
 `;
 
@@ -57,6 +60,7 @@ export const AppLogo = styled.img<LogoProps>`
     @media (max-width: 1000px) and (max-height: 600px) {
         width: 240px;
         height: 240px;
+        margin-right: 0;
     }
 
     @media (max-width: 800px) {
@@ -68,6 +72,16 @@ export const AppLogo = styled.img<LogoProps>`
         width: 200px;
         height: 200px;
     }
+
+    @media (max-width: 400px) {
+        width: 150px;
+        height: 150px;
+    }
+
+    @media (max-width: 700px) and (max-height: 400px) {
+        width: 175px;
+        height: 175px;
+    }
 `;
 
 export const TextContainer = styled.div`
@@ -75,6 +89,10 @@ export const TextContainer = styled.div`
 
     @media (max-width: 1000px) {
         width: 90%;
+    }
+
+    @media (max-width: 700px) and (max-height: 400px) {
+        margin-top: 5%;
     }
 `;
 
@@ -98,6 +116,7 @@ export const AppTitle = styled.h2<TextProps>`
     font-size: 42px;
     color: white;
     font-weight: normal;
+    margin-bottom: 1%;
 
     font-family: 'Roboto Condensed', sans-serif;
 
@@ -105,6 +124,20 @@ export const AppTitle = styled.h2<TextProps>`
 
     @media (max-width: 1000px) {
         text-align: center;
+    }
+
+    @media (max-width: 900px) {
+        font-size: 30px;
+        margin-bottom: 4%;
+    }
+
+    @media (max-width: 600px) {
+        font-size: 26px;
+    }
+
+    @media (max-width: 700px) and (max-height: 400px) {
+        font-size: 30px;
+        margin-bottom: 4%;
     }
 `;
 
@@ -114,6 +147,10 @@ export const AppDescription = styled.p<TextProps>`
 
     @media (max-width: 1000px) {
         text-align: center;
+    }
+
+    @media (max-width: 600px) {
+        font-size: 16px;
     }
 `;
 
@@ -127,8 +164,8 @@ export const StoreButtonsContainer = styled.div`
         margin-top: 5%;
     }
 
-    @media (max-width: 1000px) and (max-height: 600px) {
-        flex-direction: row;
+    @media (max-width: 1000px) {
+        flex-direction: column;
     }
 `;
 
