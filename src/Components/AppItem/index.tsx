@@ -25,7 +25,10 @@ const AppItem: React.FC<Props> = ({ App, borderRadius }: Props) => {
     return (
         <Container background={App.backgroundColor}>
             <AppContainer>
-                <AppLogo src={logo} borderRadius={borderRadius} />
+                <AppLogo
+                    src={`${process.env.PUBLIC_URL}/${logo}`}
+                    borderRadius={borderRadius}
+                />
 
                 <DescriptionContainer>
                     <TextContainer>
