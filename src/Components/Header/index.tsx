@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import {
     Container,
@@ -17,7 +18,9 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ fixed }: HeaderProps) => (
     <Container fixed={fixed}>
         <HeaderContainer>
-            <LogoText>douglasndm apps</LogoText>
+            <Link to="/">
+                <LogoText>douglasndm apps</LogoText>
+            </Link>
 
             <MenuContainer>
                 <MenuItem>

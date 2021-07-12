@@ -1,4 +1,5 @@
 interface IApp {
+    id?: string;
     name: string;
     description: string;
     logo: string;

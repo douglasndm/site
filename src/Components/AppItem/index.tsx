@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import {
     Container,
@@ -20,15 +21,17 @@ interface Props {
 }
 
 const AppItem: React.FC<Props> = ({ App, borderRadius }: Props) => {
-    const { name, logo, description, MSStore, AppStore, GooglePlay } = App;
+    const { id, name, logo, description, MSStore, AppStore, GooglePlay } = App;
 
     return (
         <Container background={App.backgroundColor}>
             <AppContainer>
-                <AppLogo
-                    src={`${process.env.PUBLIC_URL}/${logo}`}
-                    borderRadius={borderRadius}
-                />
+                <Link to={`/app/${id}`}>
+                    <AppLogo
+                        src={`${process.env.PUBLIC_URL}/${logo}`}
+                        borderRadius={borderRadius}
+                    />
+                </Link>
 
                 <DescriptionContainer>
                     <TextContainer>
