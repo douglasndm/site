@@ -1,8 +1,8 @@
 [
     {
         "id": "d130b6f1-85a6-446c-a842-8583ee0219bd",
-        "name": "Controle de Validades Times (EM TESTES)",
-        "description": "O melhor aplicativo de validade que você já conheçe agora sincronizado os dados entre seu time",
+        "name": "Controle de Validades para Times",
+        "description": "O melhor aplicativo de validades que você já conheçe agora sincronizado os dados entre seu time",
         "logo": "./Assets/Images/Apps/teams.png",
         "AppStore": "",
         "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.expirychecker.business",
@@ -12,7 +12,7 @@
     },
     {
         "id": "d86c7b0c-9fb3-44f4-9f87-527beb7fafd5",
-        "name": "Controle de Validade",
+        "name": "Controle de Validades",
         "description": "O melhor aplicativo para reduzir as perdas do seu negócio!",
         "logo": "./Assets/Images/Apps/controledevalidade.png",
         "AppStore": "https://apps.apple.com/us/app/controle-de-validade/id1549418617",
@@ -28,7 +28,7 @@
         "logo": "./Assets/Images/Apps/keeprunning.png",
         "AppStore": "https://apps.apple.com/us/app/just-keep-running/id1555891738",
         "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.keeprunning",
-        "MSStore": "",
+        "MSStore": "https://www.microsoft.com/store/apps/9P3MQR2G29L0",
         "backgroundColor": "#8918cc",
         "textColor": "#EAEAEA"
     },
