@@ -101,11 +101,18 @@ export const DescriptionContainer = styled.div`
     font-size: 18px;
 
     display: flex;
+    flex: 1;
 
     flex-direction: column;
 
     justify-content: center;
-    align-items: center;
+    align-items: left;
+
+    margin-left: 2%;
+
+    @media (max-width: 900px) {
+        margin-left: 0;
+    }
 `;
 
 interface TextProps {
@@ -157,6 +164,7 @@ export const AppDescription = styled.p<TextProps>`
 export const StoreButtonsContainer = styled.div`
     margin-top: 2%;
     align-items: center;
+    flex-direction: row;
     display: flex;
 
     @media (max-width: 1000px) {

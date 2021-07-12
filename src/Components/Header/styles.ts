@@ -11,6 +11,10 @@ export const Container = styled.div<HeaderProps>`
 
     padding: 4% 6%;
 
+    a {
+        text-decoration: none;
+    }
+
     @media (max-width: 800px) {
         padding: 20px 0;
         justify-content: center;
