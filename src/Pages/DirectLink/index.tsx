@@ -22,7 +22,7 @@ const DirectLink: React.FC = () => {
         } else if (isWindows && !!findedApp.MSStore) {
             window.location.href = findedApp.MSStore;
         } else {
-            window.location.href = 'https://douglasndm.dev';
+            window.location.href = `https://douglasndm.dev/app/${findedApp.id}`;
         }
     } else {
         window.location.href = 'https://douglasndm.dev';
