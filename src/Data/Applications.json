@@ -4,7 +4,7 @@
         "name": "Controle de Validades para Times",
         "description": "O melhor aplicativo de validades que você já conheçe agora sincronizado os dados entre seu time",
         "logo": "./Assets/Images/Apps/teams.png",
-        "AppStore": "",
+        "AppStore": "https://apps.apple.com/us/app/validades-para-times/id1568936353",
         "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.expirychecker.business",
         "MSStore": "",
         "backgroundColor": "#5856d6",
