@@ -7,7 +7,7 @@ interface Props {
 }
 
 const WebButton: React.FC<Props> = ({ url }: Props) => (
-    <Container href={url}>
+    <Container to={url}>
         <Text>Jogar no navegador</Text>
     </Container>
 );
