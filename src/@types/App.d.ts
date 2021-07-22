@@ -6,6 +6,7 @@ interface IApp {
     AppStore: string;
     GooglePlay: string;
     MSStore: string;
+    web?: string;
 
     backgroundColor: string;
     textColor: string;

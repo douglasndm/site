@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import WebButton from '../WebButton';
+
 import {
     Container,
     AppContainer,
@@ -58,6 +60,8 @@ const AppItem: React.FC<Props> = ({ App, borderRadius }: Props) => {
                                 <ButtonDownload_GooglePlay />
                             </a>
                         )}
+
+                        {!!App.web && <WebButton url={App.web} />}
                     </StoreButtonsContainer>
                 </DescriptionContainer>
             </AppContainer>

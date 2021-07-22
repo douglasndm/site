@@ -1,4 +1,17 @@
 [
+
+    {
+        "id": "27f7b6de-b4b7-4753-b37e-2e9773ca35e4",
+        "name": "TicTacToe Multiplayer",
+        "description": "Divirta-se com seus amigos.",
+        "logo": "./Assets/Images/Apps/tictactoe.png",
+        "AppStore": "",
+        "GooglePlay": "",
+        "MSStore": "https://www.microsoft.com/store/apps/9WZDNCRCSMPN",
+        "web": "https://games.douglasndm.dev/tictactoe",
+        "backgroundColor": "#68d3f7",
+        "textColor": "#FFF"
+    },
     {
         "id": "d130b6f1-85a6-446c-a842-8583ee0219bd",
         "name": "Controle de Validades para Times",
@@ -41,17 +54,6 @@
         "GooglePlay": "https://play.google.com/store/apps/details?id=com.rntabuada",
         "MSStore": "https://www.microsoft.com/store/apps/9WZDNCRDXD7H",
         "backgroundColor": "#00bfff",
-        "textColor": "#fff"
-    },
-    {
-        "id": "27f7b6de-b4b7-4753-b37e-2e9773ca35e4",
-        "name": "Jogo da velha para duas pessoas",
-        "description": "Divirta-se com seus amigos.",
-        "logo": "./Assets/Images/Apps/jogodavelha.png",
-        "AppStore": "",
-        "GooglePlay": "",
-        "MSStore": "https://www.microsoft.com/store/apps/9WZDNCRCSMPN",
-        "backgroundColor": "#4f4f4f",
         "textColor": "#fff"
     }
 ]
