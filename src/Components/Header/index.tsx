@@ -42,6 +42,12 @@ const Header: React.FC<HeaderProps> = ({ fixed }: HeaderProps) => (
                         github
                     </MenuItemLinkExternal>
                 </MenuItem>
+
+                <MenuItem className="canCollapse">
+                    <MenuItemLinkExternal href="https://twitter.com/douglasndmdev">
+                        twitter
+                    </MenuItemLinkExternal>
+                </MenuItem>
             </MenuContainer>
         </HeaderContainer>
     </Container>
