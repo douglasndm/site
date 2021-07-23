@@ -6,7 +6,7 @@
         "description": "Divirta-se com seus amigos.",
         "logo": "./Assets/Images/Apps/tictactoe.png",
         "AppStore": "",
-        "GooglePlay": "",
+        "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.tictactoe",
         "MSStore": "https://www.microsoft.com/store/apps/9WZDNCRCSMPN",
 
         "backgroundColor": "#68d3f7",
