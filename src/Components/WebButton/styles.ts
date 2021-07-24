@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
-export const Container = styled(Link)`
+export const Container = styled.a`
     text-decoration: none;
-    background-color: white;
+    background-color: #000;
     padding: 25px;
     border-radius: 12px;
     transition: all 0.2s;
@@ -11,7 +10,7 @@ export const Container = styled(Link)`
     overflow: hidden;
 
     &:hover {
-        background-color: #c7c7c7;
+        background-color: #454545;
     }
 
     @media (max-width: 1000px) {
@@ -27,7 +26,7 @@ export const Container = styled(Link)`
 `;
 
 export const Text = styled.span`
-    color: rgba(0, 0, 0, 0.7);
+    color: #fff;
     font-family: 'Verdana', sans-serif;
     font-size: 16px;
     font-weight: bold;

@@ -8,7 +8,7 @@
         "AppStore": "",
         "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.tictactoe",
         "MSStore": "https://www.microsoft.com/store/apps/9WZDNCRCSMPN",
-
+        "web": "https://tictactoe-edad7.web.app/",
         "backgroundColor": "#68d3f7",
         "textColor": "#FFF"
     },
