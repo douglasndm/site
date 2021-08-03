@@ -5,7 +5,7 @@
         "name": "TicTacToe Multiplayer",
         "description": "Divirta-se com seus amigos.",
         "logo": "./Assets/Images/Apps/tictactoe.png",
-        "AppStore": "",
+        "AppStore": "https://apps.apple.com/us/app/tictactoe-multiplayers/id1577124505",
         "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.tictactoe",
         "MSStore": "https://www.microsoft.com/store/apps/9WZDNCRCSMPN",
         "web": "https://tictactoe-edad7.web.app/",
