@@ -103,6 +103,10 @@ export const MenuItemLink = styled(Link)`
     font-size: 23px;
     color: white;
 
+    @media (max-width: 800px) {
+        font-size: 20px;
+    }
+
     @media (max-width: 600px) {
         font-size: 18px;
     }
@@ -117,6 +121,10 @@ export const MenuItemLinkExternal = styled.a.attrs(() => ({
     text-decoration: none;
     font-size: 23px;
     color: white;
+
+    @media (max-width: 800px) {
+        font-size: 20px;
+    }
 
     @media (max-width: 600px) {
         font-size: 18px;
