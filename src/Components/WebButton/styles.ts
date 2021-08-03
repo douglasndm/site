@@ -4,7 +4,7 @@ export const Container = styled.a`
     text-decoration: none;
     background-color: #000;
     padding: 25px;
-    border-radius: 12px;
+    border-radius: 10px;
     transition: all 0.2s;
     text-align: center;
     overflow: hidden;
@@ -17,11 +17,17 @@ export const Container = styled.a`
         margin-right: 0;
     }
 
+    @media (max-width: 800px) {
+        margin-top: 2%;
+        width: 175px;
+        height: 55px;
+        padding: 7px;
+    }
+
     @media (max-width: 600px) {
         width: 150px;
         height: 50px;
-        padding: 2px;
-        margin-top: 10px;
+        padding: 3px;
     }
 `;
 
