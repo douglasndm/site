@@ -127,7 +127,7 @@ export const AppTitle = styled.h2<TextProps>`
 
     color: ${(props) => props.color};
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1200px) {
         text-align: center;
     }
 
@@ -150,7 +150,7 @@ export const AppDescription = styled.p<TextProps>`
     color: ${(props) => props.color};
     font-family: 'Open Sans', sans-serif;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1200px) {
         text-align: center;
     }
 
@@ -179,12 +179,10 @@ export const ButtonDownload_MicrosoftStore = styled.img.attrs(() => ({
     margin-right: 20px;
     border-radius: 22px;
 
-    @media (max-width: 1000px) {
-        margin-right: 0;
-    }
-    @media (max-width: 800px) {
+    @media (max-width: 1200px) {
         width: 190px;
         height: 60px;
+        margin-right: 0;
     }
 `;
 
@@ -195,13 +193,10 @@ export const ButtonDownload_AppStore = styled.img.attrs(() => ({
     height: 75px;
     margin-right: 20px;
 
-    @media (max-width: 1000px) {
-        margin-right: 0;
-    }
-
-    @media (max-width: 800px) {
+    @media (max-width: 1200px) {
         width: 175px;
         height: 55px;
+        margin-right: 0;
     }
 
     @media (max-width: 600px) {
@@ -216,13 +211,10 @@ export const ButtonDownload_GooglePlay = styled.img.attrs(() => ({
     width: 220px;
     height: 95px;
 
-    @media (max-width: 1000px) {
-        margin-right: 0;
-    }
-
-    @media (max-width: 800px) {
+    @media (max-width: 1200px) {
         width: 190px;
         height: 80px;
+        margin-right: 0;
     }
 
     @media (max-width: 600px) {

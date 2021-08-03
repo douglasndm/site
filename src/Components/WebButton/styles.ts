@@ -17,11 +17,14 @@ export const Container = styled.a`
         margin-right: 0;
     }
 
-    @media (max-width: 800px) {
-        margin-top: 2%;
+    @media (max-width: 1200px) {
         width: 175px;
         height: 55px;
         padding: 7px;
+    }
+
+    @media (max-width: 800px) {
+        margin-top: 2%;
     }
 
     @media (max-width: 600px) {
