@@ -2,14 +2,14 @@
 
     {
         "id": "27f7b6de-b4b7-4753-b37e-2e9773ca35e4",
-        "name": "TicTacToe Multiplayer",
+        "name": "Jogo da Velha Multiplayer",
         "description": "Divirta-se com seus amigos.",
-        "logo": "./Assets/Images/Apps/tictactoe.png",
+        "logo": "./Assets/Images/Apps/JogoDaVelha.png",
         "AppStore": "https://apps.apple.com/us/app/tictactoe-multiplayers/id1577124505",
         "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.tictactoe",
         "MSStore": "https://www.microsoft.com/store/apps/9WZDNCRCSMPN",
         "web": "https://tictactoe-edad7.web.app/",
-        "backgroundColor": "#68d3f7",
+        "backgroundColor": "#33B9DA",
         "textColor": "#FFF"
     },
     {
