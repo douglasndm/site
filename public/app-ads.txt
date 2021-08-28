@@ -105,3 +105,5 @@ e-planning.net, e1028cf4f3301b90, RESELLER, c1ba615865ed87b2
 Se7en.es, 212432, RESELLER, 064bc410192443d8
 prequel.tv, 513, RESELLER
 decenterads.com, 191, RESELLER
+
+facebook.com, 526071638313030, DIRECT, c3e20eee3f780d68
