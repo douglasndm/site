@@ -1,16 +1,14 @@
 [
-
     {
-        "id": "27f7b6de-b4b7-4753-b37e-2e9773ca35e4",
-        "name": "Jogo da Velha Multiplayer",
-        "description": "Divirta-se com seus amigos.",
-        "logo": "./Assets/Images/Apps/JogoDaVelha.png",
-        "AppStore": "https://apps.apple.com/us/app/tictactoe-multiplayers/id1577124505",
-        "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.tictactoe",
-        "MSStore": "https://www.microsoft.com/store/apps/9WZDNCRCSMPN",
-        "web": "",
-        "backgroundColor": "#33B9DA",
-        "textColor": "#FFF"
+        "id": "d86c7b0c-9fb3-44f4-9f87-527beb7fafd5",
+        "name": "Controle de Validades",
+        "description": "O melhor aplicativo para reduzir as perdas do seu negócio!",
+        "logo": "./Assets/Images/Apps/controledevalidade.png",
+        "AppStore": "https://apps.apple.com/us/app/controle-de-validade/id1549418617",
+        "GooglePlay": "https://play.google.com/store/apps/details?id=com.controledevalidade",
+        "MSStore": "",
+        "backgroundColor": "#14d48f",
+        "textColor": "#FFFFFF"
     },
     {
         "id": "d130b6f1-85a6-446c-a842-8583ee0219bd",
@@ -24,15 +22,16 @@
         "textColor": "#FFFFFF"
     },
     {
-        "id": "d86c7b0c-9fb3-44f4-9f87-527beb7fafd5",
-        "name": "Controle de Validades",
-        "description": "O melhor aplicativo para reduzir as perdas do seu negócio!",
-        "logo": "./Assets/Images/Apps/controledevalidade.png",
-        "AppStore": "https://apps.apple.com/us/app/controle-de-validade/id1549418617",
-        "GooglePlay": "https://play.google.com/store/apps/details?id=com.controledevalidade",
-        "MSStore": "",
-        "backgroundColor": "#14d48f",
-        "textColor": "#FFFFFF"
+        "id": "27f7b6de-b4b7-4753-b37e-2e9773ca35e4",
+        "name": "Jogo da Velha Multiplayer",
+        "description": "Divirta-se com seus amigos.",
+        "logo": "./Assets/Images/Apps/JogoDaVelha.png",
+        "AppStore": "https://apps.apple.com/us/app/tictactoe-multiplayers/id1577124505",
+        "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.tictactoe",
+        "MSStore": "https://www.microsoft.com/store/apps/9WZDNCRCSMPN",
+        "web": "",
+        "backgroundColor": "#33B9DA",
+        "textColor": "#FFF"
     },
     {
         "id": "61647567-a665-4a56-880c-71fce01eea72",
