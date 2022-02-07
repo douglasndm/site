@@ -117,7 +117,7 @@ interface TextProps {
     color: string;
 }
 
-export const AppTitle = styled.h2<TextProps>`
+export const AppTitle = styled.h1<TextProps>`
     font-size: 42px;
     color: white;
     font-weight: normal;
