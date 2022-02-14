@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import apps from '../../Data/Applications.json';
 
@@ -19,6 +20,13 @@ const App: React.FC = () => {
 
     return (
         <Container backgroundColor={app?.backgroundColor}>
+            {app && (
+                <Helmet>
+                    <title>{app.name} | douglasndm</title>
+                    <meta name="description" content={app.description} />
+                </Helmet>
+            )}
+
             <Header />
 
             {app && <AppItem App={app} />}

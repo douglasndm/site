@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { isAndroid, isIOS, isWindows } from 'react-device-detect';
+import { Helmet } from 'react-helmet';
 
 import apps from '../../Data/Applications.json';
 
@@ -28,7 +29,15 @@ const DirectLink: React.FC = () => {
         window.location.href = 'https://douglasndm.dev';
     }
 
-    return <h1>redirecting...</h1>;
+    return (
+        <>
+            <Helmet>
+                <title>Redirecting | douglasndm</title>
+                <meta name="robots" content="noindex" />
+            </Helmet>
+            <h1>redirecting...</h1>
+        </>
+    );
 };
 
 export default DirectLink;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import apps from '../../Data/Applications.json';
 
@@ -11,6 +12,13 @@ import { Container, ListItem } from './styles';
 
 const Home: React.FC = () => (
     <Container>
+        <Helmet>
+            <meta
+                name="description"
+                content="Conheça aplicativos incríveis feitos para facilitar sua vida."
+            />
+        </Helmet>
+
         <Header />
 
         <BottomButton />
