@@ -24,6 +24,7 @@ const App: React.FC = () => {
                 <Helmet>
                     <title>{app.name} | douglasndm</title>
                     <meta name="description" content={app.description} />
+                    <meta name="keywords" content={app.tags} />
                 </Helmet>
             )}
 

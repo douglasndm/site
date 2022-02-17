@@ -8,7 +8,8 @@
         "GooglePlay": "https://play.google.com/store/apps/details?id=com.controledevalidade",
         "MSStore": "",
         "backgroundColor": "#14d48f",
-        "textColor": "#FFFFFF"
+        "textColor": "#FFFFFF",
+        "tags": "validades, produtos, vencimentos, mercado, loja, vencido, produto, lojas, promotor, validade, produto vencimento, aplicativo para vencimentos, aplicativo para loja, aplicativo para controlar vencimentos"
     },
     {
         "id": "d130b6f1-85a6-446c-a842-8583ee0219bd",
@@ -19,7 +20,8 @@
         "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.expirychecker.business",
         "MSStore": "",
         "backgroundColor": "#5856d6",
-        "textColor": "#FFFFFF"
+        "textColor": "#FFFFFF",
+        "tags": "validades, produtos, vencimentos, mercado, loja, vencido, produto, lojas, promotor, validade, produto vencimento, aplicativo para vencimentos, aplicativo para loja, aplicativo para controlar vencimentos"
     },
     {
         "id": "27f7b6de-b4b7-4753-b37e-2e9773ca35e4",
@@ -31,7 +33,8 @@
         "MSStore": "https://www.microsoft.com/store/apps/9WZDNCRCSMPN",
         "web": "",
         "backgroundColor": "#33B9DA",
-        "textColor": "#FFF"
+        "textColor": "#FFF",
+        "tags": "jogo da velha, jogo da velha multiplayer, jogo da velha para dois, jogo da velha amigos, jogo da velha online, jogo casual, jogo para familia, jogo de estratégia, tic tac toe, tic-tac-toe, tictactoe"
     },
     {
         "id": "61647567-a665-4a56-880c-71fce01eea72",
@@ -42,7 +45,8 @@
         "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.keeprunning",
         "MSStore": "https://www.microsoft.com/store/apps/9P3MQR2G29L0",
         "backgroundColor": "#8918cc",
-        "textColor": "#EAEAEA"
+        "textColor": "#EAEAEA",
+        "tags": "infitity ruuner, corrida infinida, jogo 2d, sprite, unity"
     },
     {
         "id": "b2c132c2-4c57-45bf-8916-877c897b9514",
@@ -53,6 +57,7 @@
         "GooglePlay": "https://play.google.com/store/apps/details?id=com.rntabuada",
         "MSStore": "https://www.microsoft.com/store/apps/9WZDNCRDXD7H",
         "backgroundColor": "#00bfff",
-        "textColor": "#fff"
+        "textColor": "#fff",
+        "tags": "tabuada, matematica, math, algebra, calculos, soma, subtração, multiplicação, divisão"
     }
 ]

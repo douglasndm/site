@@ -7,6 +7,7 @@ interface IApp {
     GooglePlay: string;
     MSStore: string;
     web?: string;
+    tags: string;
 
     backgroundColor: string;
     textColor: string;
