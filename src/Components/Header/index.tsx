@@ -32,11 +32,6 @@ const Header: React.FC<HeaderProps> = ({ fixed }: HeaderProps) => (
                     <MenuItemLink to="/">apps</MenuItemLink>
                 </MenuItem>
                 <MenuItem>
-                    <MenuItemLinkExternal href="https://docs.douglasndm.dev">
-                        blog
-                    </MenuItemLinkExternal>
-                </MenuItem>
-                <MenuItem>
                     <MenuItemLink to="/privacy">privacidade</MenuItemLink>
                 </MenuItem>
                 <MenuItem>
