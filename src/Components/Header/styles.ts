@@ -62,6 +62,15 @@ export const LogoText = styled.h1`
 `;
 
 export const MenuContainer = styled.menu`
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 12px;
+    backdrop-filter: saturate(180%) blur(20px);
+
+    @-moz-document url-prefix() {
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+
     @media (max-width: 1000px) {
         flex: 1;
         text-align: center;
@@ -79,6 +88,9 @@ export const MenuItem = styled.span`
 
     & + & {
         margin-right: 30px;
+    }
+    :last-child {
+        margin-right: 0;
     }
 
     @media (max-width: 900px) {

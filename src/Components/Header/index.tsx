@@ -24,6 +24,11 @@ const Header: React.FC<HeaderProps> = ({ fixed }: HeaderProps) => (
 
             <MenuContainer>
                 <MenuItem>
+                    <MenuItemLinkExternal href="https://controledevalidades.com">
+                        blog
+                    </MenuItemLinkExternal>
+                </MenuItem>
+                <MenuItem>
                     <MenuItemLink to="/">apps</MenuItemLink>
                 </MenuItem>
                 <MenuItem>
