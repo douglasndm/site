@@ -37,6 +37,13 @@ const App: React.FC = () => {
                     <title>{app.name} | douglasndm</title>
                     <meta name="description" content={app.description} />
                     <meta name="keywords" content={app.tags} />
+
+                    {app.friendlyPackageName === 'expirychecker' && (
+                        <link
+                            rel="canonical"
+                            href="https://controledevalidades.com/aplicativo/"
+                        />
+                    )}
                 </Helmet>
             )}
 
