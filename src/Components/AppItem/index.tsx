@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import WebButton from '../WebButton';
-
 import {
     Container,
     AppContainer,
@@ -15,6 +13,7 @@ import {
     ButtonDownload_MicrosoftStore,
     ButtonDownload_AppStore,
     ButtonDownload_GooglePlay,
+    MoreInfoButton,
 } from './styles';
 
 interface Props {
@@ -23,12 +22,20 @@ interface Props {
 }
 
 const AppItem: React.FC<Props> = ({ App, borderRadius }: Props) => {
-    const { id, name, logo, description, MSStore, AppStore, GooglePlay } = App;
+    const {
+        friendlyPackageName,
+        name,
+        logo,
+        description,
+        MSStore,
+        AppStore,
+        GooglePlay,
+    } = App;
 
     return (
         <Container background={App.backgroundColor}>
             <AppContainer>
-                <Link to={`/app/${id}`}>
+                <Link to={`/app/${friendlyPackageName}`}>
                     <AppLogo
                         src={`${process.env.PUBLIC_URL}/${logo}`}
                         borderRadius={borderRadius}
@@ -61,7 +68,14 @@ const AppItem: React.FC<Props> = ({ App, borderRadius }: Props) => {
                             </a>
                         )}
 
-                        {!!App.web && <WebButton url={App.web} />}
+                        {!!App.MoreInfoURL && (
+                            <MoreInfoButton
+                                href={App.MoreInfoURL}
+                                target="_blank"
+                            >
+                                Mais informações
+                            </MoreInfoButton>
+                        )}
                     </StoreButtonsContainer>
                 </DescriptionContainer>
             </AppContainer>
