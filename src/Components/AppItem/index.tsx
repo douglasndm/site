@@ -23,12 +23,20 @@ interface Props {
 }
 
 const AppItem: React.FC<Props> = ({ App, borderRadius }: Props) => {
-    const { id, name, logo, description, MSStore, AppStore, GooglePlay } = App;
+    const {
+        friendlyPackageName,
+        name,
+        logo,
+        description,
+        MSStore,
+        AppStore,
+        GooglePlay,
+    } = App;
 
     return (
         <Container background={App.backgroundColor}>
             <AppContainer>
-                <Link to={`/app/${id}`}>
+                <Link to={`/app/${friendlyPackageName}`}>
                     <AppLogo
                         src={`${process.env.PUBLIC_URL}/${logo}`}
                         borderRadius={borderRadius}

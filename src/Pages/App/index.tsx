@@ -16,7 +16,19 @@ interface Props {
 const App: React.FC = () => {
     const { app_id } = useParams<Props>();
 
-    const app = useMemo(() => apps.find((a) => a.id === app_id), [app_id]);
+    const app = useMemo(() => {
+        const findedApp = apps.find((a) => {
+            if (
+                a.id === app_id.toLowerCase() ||
+                a.friendlyPackageName === app_id.toLowerCase()
+            ) {
+                return true;
+            }
+            return false;
+        });
+
+        return findedApp;
+    }, [app_id]);
 
     return (
         <Container backgroundColor={app?.backgroundColor}>

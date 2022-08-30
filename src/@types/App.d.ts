@@ -1,5 +1,6 @@
 interface IApp {
     id?: string;
+    friendlyPackageName: string;
     name: string;
     description: string;
     logo: string;

@@ -1,6 +1,7 @@
 [
     {
         "id": "d86c7b0c-9fb3-44f4-9f87-527beb7fafd5",
+        "friendlyPackageName": "expirychecker",
         "name": "Controle de Validades",
         "description": "O melhor aplicativo para reduzir as perdas do seu negócio!",
         "logo": "./Assets/Images/Apps/controledevalidade.png",
@@ -13,6 +14,7 @@
     },
     {
         "id": "d130b6f1-85a6-446c-a842-8583ee0219bd",
+        "friendlyPackageName": "teams",
         "name": "Controle de Validades para Times",
         "description": "O melhor aplicativo de validades que você já conheçe agora sincronizado os dados entre seu time",
         "logo": "./Assets/Images/Apps/teams.png",
@@ -25,6 +27,7 @@
     },
     {
         "id": "27f7b6de-b4b7-4753-b37e-2e9773ca35e4",
+        "friendlyPackageName": "tictactoe",
         "name": "Jogo da Velha Multiplayer",
         "description": "Divirta-se com seus amigos.",
         "logo": "./Assets/Images/Apps/JogoDaVelha.png",
@@ -38,6 +41,7 @@
     },
     {
         "id": "61647567-a665-4a56-880c-71fce01eea72",
+        "friendlyPackageName": "keeprunning",
         "name": "Keep Running",
         "description": "O quanto você consegue correr?",
         "logo": "./Assets/Images/Apps/keeprunning.png",
@@ -50,6 +54,7 @@
     },
     {
         "id": "b2c132c2-4c57-45bf-8916-877c897b9514",
+        "friendlyPackageName": "tabuada",
         "name": "Tabuada",
         "description": "Aprender a tabuada nunca foi tão fácil.",
         "logo": "./Assets/Images/Apps/tabuada.png",
