@@ -16,15 +16,3 @@ export const Text = styled.span`
     font-size: 18px;
     color: #fff;
 `;
-
-export const Link = styled.a`
-    font-family: 'Roboto Condensed', sans-serif;
-
-    font-size: 16px;
-    color: #fff;
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
-    }
-`;
