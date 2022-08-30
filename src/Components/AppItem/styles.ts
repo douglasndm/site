@@ -222,3 +222,20 @@ export const ButtonDownload_GooglePlay = styled.img.attrs(() => ({
         height: 70px;
     }
 `;
+
+export const MoreInfoButton = styled.a`
+    background-color: rgba(0, 0, 0, 1);
+    padding: 21px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+    margin-left: 20px;
+
+    &:hover {
+        background-color: rgba(100, 100, 100, 1);
+    }
+`;

@@ -7,6 +7,7 @@ interface IApp {
     AppStore: string;
     GooglePlay: string;
     MSStore: string;
+    MoreInfoURL?: string;
     web?: string;
     tags: string;
 

@@ -15,6 +15,7 @@ import {
     ButtonDownload_MicrosoftStore,
     ButtonDownload_AppStore,
     ButtonDownload_GooglePlay,
+    MoreInfoButton,
 } from './styles';
 
 interface Props {
@@ -70,6 +71,15 @@ const AppItem: React.FC<Props> = ({ App, borderRadius }: Props) => {
                         )}
 
                         {!!App.web && <WebButton url={App.web} />}
+
+                        {!!App.MoreInfoURL && (
+                            <MoreInfoButton
+                                href={App.MoreInfoURL}
+                                target="_blank"
+                            >
+                                Mais informações
+                            </MoreInfoButton>
+                        )}
                     </StoreButtonsContainer>
                 </DescriptionContainer>
             </AppContainer>
