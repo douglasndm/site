@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import WebButton from '../WebButton';
-
 import {
     Container,
     AppContainer,
@@ -69,8 +67,6 @@ const AppItem: React.FC<Props> = ({ App, borderRadius }: Props) => {
                                 <ButtonDownload_MicrosoftStore />
                             </a>
                         )}
-
-                        {!!App.web && <WebButton url={App.web} />}
 
                         {!!App.MoreInfoURL && (
                             <MoreInfoButton

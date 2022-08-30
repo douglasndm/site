@@ -9567,11 +9567,6 @@ react-side-effect@^2.1.0:
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.1.tgz#66c5701c3e7560ab4822a4ee2742dee215d72eb3"
   integrity sha512-2FoTQzRNTncBVtnzxFOk2mCpcfxQpenBMbk5kSVBg5UcPqV9fRbgY2zhb7GTWWOlpFmAxhClBDlIq8Rsubz1yQ==
 
-react-unity-webgl@^8.4.3:
-  version "8.4.3"
-  resolved "https://registry.yarnpkg.com/react-unity-webgl/-/react-unity-webgl-8.4.3.tgz#b01c93751df5a7868db3c23f492cf3d2f0db2795"
-  integrity sha512-Ue/ktrsChAt/D7vWfpLWF8HFR6h90s4XvkJbSy4y436QJGEXNlana78qTsPrGfDCV0p5OeFoz5quFe0Hkld1TA==
-
 react@^17.0.1:
   version "17.0.1"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.1.tgz#6e0600416bd57574e3f86d92edba3d9008726127"
