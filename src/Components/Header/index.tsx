@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import {
     Container,
     HeaderContainer,
-    LogoText,
+    Logo,
     MenuContainer,
     MenuItem,
     MenuItemLink,
@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = ({ fixed }: HeaderProps) => (
     <Container fixed={fixed}>
         <HeaderContainer>
             <Link to="/">
-                <LogoText>douglasndm apps</LogoText>
+                <Logo alt="douglasndm logo" />
             </Link>
 
             <MenuContainer>
