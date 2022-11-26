@@ -165,6 +165,11 @@ export const StoreButtonsContainer = styled.div`
     flex-direction: row;
     display: flex;
 
+    @media (max-width: 1300px) {
+        justify-content: center;
+        align-content: center;
+    }
+
     @media (max-width: 1100px) {
         flex-direction: column;
         margin-top: 5%;
@@ -237,5 +242,17 @@ export const MoreInfoButton = styled.a`
 
     &:hover {
         background-color: rgba(100, 100, 100, 1);
+    }
+
+    @media (max-width: 1300px) {
+        margin-top: -5px;
+        padding: 18px 20px;
+        margin-left: 2px;
+        font-size: 14px;
+    }
+
+    @media (max-width: 1100px) {
+        padding: 20px;
+        margin-left: 0;
     }
 `;
