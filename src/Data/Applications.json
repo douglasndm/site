@@ -40,19 +40,6 @@
         "tags": "jogo da velha, jogo da velha multiplayer, jogo da velha para dois, jogo da velha amigos, jogo da velha online, jogo casual, jogo para familia, jogo de estratégia, tic tac toe, tic-tac-toe, tictactoe"
     },
     {
-        "id": "61647567-a665-4a56-880c-71fce01eea72",
-        "friendlyPackageName": "keeprunning",
-        "name": "Keep Running",
-        "description": "O quanto você consegue correr?",
-        "logo": "./Assets/Images/Apps/keeprunning.png",
-        "AppStore": "https://apps.apple.com/us/app/just-keep-running/id1555891738",
-        "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.keeprunning",
-        "MSStore": "https://www.microsoft.com/store/apps/9P3MQR2G29L0",
-        "backgroundColor": "#8918cc",
-        "textColor": "#EAEAEA",
-        "tags": "infitity ruuner, corrida infinida, jogo 2d, sprite, unity"
-    },
-    {
         "id": "b2c132c2-4c57-45bf-8916-877c897b9514",
         "friendlyPackageName": "tabuada",
         "name": "Tabuada",
