@@ -256,59 +256,6 @@ const ExpiryTracker: React.FC = () => (
             <h2>Estrutura XML</h2>
 
             <XMLExportImage />
-
-            {/* eslint-disable
-            <pre>
-            <code>
-            data
-            ├── total
-            │   ├── products (Total de produtos)
-            │   ├── brands (Total de marcas)
-            │   ├── categories (Total de categorias)
-            │   └── stores (Total de lojas)
-            │
-            ├── brands - Array (Marcas)
-            │   └── brand
-            │       ├── id (ID da marca)
-            │       └── nome (Nome da marca)
-            │
-            ├── categories - Array (Categorias)
-            │   └── category
-            │       ├── id (ID da categoria)
-            │       └── nome (Nome da categoria)
-            │
-            ├── stores - Array (Lojas)
-            │   └── store
-            │       ├── id (ID da loja)
-            │       └── nome (Nome da loja)
-            │
-            └── products (Produtos)
-                └── product
-                    ├── name (Nome do produto)
-                    ├── code (Código do produto)
-                    ├── photo (Foto do produto)
-                    ├── daysToBeNext (Dias para ser o próximo)
-                    ├── created_at (Data de criação do produto)
-                    ├── updated_at (Data de atualização do produto)
-                    ├── batches - Array (Lotes do produto)
-                    │   └── batch
-                    │       ├── name (Nome do lote)
-                    │       ├── exp_date (Data de validade do lote)
-                    │       ├── amount (Quantidade do lote)
-                    │       ├── price (Preço do lote)
-                    │       ├── price_tmp (Preço temporário do lote)
-                    │       ├── status (Status do lote)
-                    │       ├── created_at (Data de criação do lote)
-                    │       └── updated_at (Data de atualização do lote)
-                    ├── brand (Marca do produto)
-                    │   └── id (ID da marca)
-                    ├── category (Categoria do produto)
-                    │   └── id (ID da categoria)
-                    └── store (Loja do produto)
-                        └── id (ID da loja)
-            </code>
-            </pre> */}
-            {/* /*eslint-enable */}
         </ExplainContainer>
     </Container>
 );
