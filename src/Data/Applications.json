@@ -51,5 +51,19 @@
         "backgroundColor": "#00bfff",
         "textColor": "#fff",
         "tags": "tabuada, matematica, math, algebra, calculos, soma, subtração, multiplicação, divisão"
+    },
+    {
+        "id": "a997ebe8-901a-4887-adb2-8dd192690004",
+        "friendlyPackageName": "babsnation",
+        "name": "BabsNation",
+        "description": "Seus cão.",
+        "logo": "./Assets/Images/Apps/babsnation.png",
+        "AppStore": "",
+        "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.flappybabs",
+        "MSStore": "https://www.microsoft.com/store/apps/9P2JMHC5DM9Q",
+        "MoreInfoURL": "https://babsnation.douglasndm.dev",
+        "backgroundColor": "#FF02D6",
+        "textColor": "#fff",
+        "tags": "pain babs, barbara emely, babs, flappy bird, pain gaming, league of legends, mf, miss fortune"
     }
 ]
