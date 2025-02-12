@@ -71,10 +71,9 @@
         "name": "BabsNation",
         "description": "Seus cão.",
         "logo": "./Assets/Images/Apps/babsnation.png",
-        "AppStore": "",
+        "AppStore": "https://testflight.apple.com/join/p7VqUM8B",
         "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.flappybabs",
         "MSStore": "https://www.microsoft.com/store/apps/9P2JMHC5DM9Q",
-        "MoreInfoURL": "https://babsnation.douglasndm.dev",
         "backgroundColor": "#FF02D6",
         "textColor": "#fff",
         "tags": "pain babs, barbara emely, babs, flappy bird, pain gaming, league of legends, mf, miss fortune"
