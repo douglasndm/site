@@ -24,11 +24,6 @@ const Header: React.FC<HeaderProps> = ({ fixed }: HeaderProps) => (
 
             <MenuContainer>
                 <MenuItem>
-                    <MenuItemLinkExternal href="https://controledevalidades.com">
-                        blog
-                    </MenuItemLinkExternal>
-                </MenuItem>
-                <MenuItem>
                     <MenuItemLink to="/">apps</MenuItemLink>
                 </MenuItem>
                 <MenuItem>
@@ -49,8 +44,8 @@ const Header: React.FC<HeaderProps> = ({ fixed }: HeaderProps) => (
                 </MenuItem>
 
                 <MenuItem className="canCollapse">
-                    <MenuItemLinkExternal href="https://twitter.com/douglasndmdev">
-                        twitter
+                    <MenuItemLinkExternal href="https://bsky.app/profile/douglasndm.dev">
+                        bluesky
                     </MenuItemLinkExternal>
                 </MenuItem>
             </MenuContainer>
