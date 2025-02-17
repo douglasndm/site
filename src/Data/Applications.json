@@ -32,7 +32,7 @@
         "name": "The Pet Gallery",
         "description": "Sua dose diária de lambeijo",
         "logo": "./Assets/Images/Apps/thepetgallery.png",
-        "AppStore": "",
+        "AppStore": "https://apps.apple.com/us/app/the-pet-gallery/id6733220011",
         "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.thepetgallery",
         "MSStore": "",
         "backgroundColor": "#f8cdb9",
