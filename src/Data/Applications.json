@@ -27,6 +27,19 @@
         "tags": "validades, produtos, vencimentos, mercado, loja, vencido, produto, lojas, promotor, validade, produto vencimento, aplicativo para vencimentos, aplicativo para loja, aplicativo para controlar vencimentos"
     },
     {
+        "id": "4547ba40-6a75-4f9b-9079-6629ee4e8cad",
+        "friendlyPackageName": "nowplaying",
+        "name": "GameLog Now Playing",
+        "description": "Nunca mais esqueça de terminar um jogo, cadastre e acompanhe todos os seus jogos em todas as plataformas",
+        "logo": "./Assets/Images/Apps/nowplaying.png",
+        "AppStore": "https://apps.apple.com/us/app/gamelog-now-playing/id6746947488",
+        "GooglePlay": "",
+        "MSStore": "",
+        "backgroundColor": "#FC7FB6",
+        "textColor": "#FFFFFF",
+        "tags": "game, gamelog, video-games, playstation, xbox, nintendo, steam, pc gaming, jogos, tracker"
+    },
+    {
         "id": "13f261d0-05e0-419b-a777-533375125958",
         "friendlyPackageName": "petgallery",
         "name": "The Pet Gallery",
