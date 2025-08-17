@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
@@ -30,11 +30,15 @@ const App: React.FC = () => {
         return findedApp;
     }, [app_id]);
 
+    useEffect(() => {
+        document.title = `${app?.name} | douglasndm.dev`;
+    }, [app]);
+
     return (
         <Container backgroundColor={app?.backgroundColor}>
             {app && (
                 <Helmet>
-                    <title>{app.name} | douglasndm</title>
+                    <title>{app.name} | douglasndm.dev</title>
                     <meta name="description" content={app.description} />
                     <meta name="keywords" content={app.tags} />
 
