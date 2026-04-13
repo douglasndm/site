@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 
+import Footer from '../../../Components/Footer';
 import Header from '../../../Components/Header';
 
 import {
@@ -48,6 +49,8 @@ const Error_404: React.FC = () => {
                     </DescriptionContainer>
                 </TextContainer>
             </Content>
+
+            <Footer />
         </Container>
     );
 };
