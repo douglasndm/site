@@ -5,7 +5,7 @@ import GlobalStyles from './Styles/Global';
 import { ThemeModeProvider, useThemeMode } from './Contexts/ThemeContext';
 import { themes } from './Styles/theme';
 
-import Routes from './Routes';
+import AppRoutes from './Routes';
 
 const AppContent: React.FC = () => {
     const { themeMode } = useThemeMode();
@@ -13,7 +13,7 @@ const AppContent: React.FC = () => {
     return (
         <ThemeProvider theme={themes[themeMode]}>
             <GlobalStyles />
-            <Routes />
+            <AppRoutes />
         </ThemeProvider>
     );
 };

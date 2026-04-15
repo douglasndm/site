@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router';
 
 interface HeaderProps {
     fixed?: boolean;
@@ -41,7 +41,7 @@ export const HeaderBar = styled.header`
 `;
 
 export const Logo = styled.img.attrs(() => ({
-    src: `${process.env.PUBLIC_URL}/Assets/Images/logo-horizontal-stroke.png`,
+    src: `/Assets/Images/logo-horizontal-stroke.png`,
 }))`
     width: 3.25rem;
     height: 3.25rem;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import { isAndroid, isIOS, isWindows } from 'react-device-detect';
 import { Helmet } from 'react-helmet';
 
@@ -10,10 +10,9 @@ interface Params {
 }
 
 const DirectLink: React.FC = () => {
-    const params = useParams();
-    const routeParams = params as Params;
+    const { appId } = useParams<{ appId: string }>();
 
-    const findedApp = apps.find((app) => app.id === routeParams.appId);
+    const findedApp = apps.find((app) => app.id === appId);
 
     if (findedApp) {
         if (isAndroid && !!findedApp.GooglePlay) {

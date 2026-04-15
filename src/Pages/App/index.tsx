@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router';
 import { Helmet } from 'react-helmet';
 
 import apps from '../../Data/Applications.json';
@@ -23,9 +23,11 @@ interface Props {
 }
 
 const App: React.FC = () => {
-    const { app_id } = useParams<Props>();
+    const { app_id } = useParams<{ app_id: string }>();
 
     const app = useMemo(() => {
+        if (!app_id) return undefined;
+
         const findedApp = apps.find((a) => {
             if (
                 a.id === app_id.toLowerCase() ||

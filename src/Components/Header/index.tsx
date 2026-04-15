@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 import { useThemeMode } from '../../Contexts/ThemeContext';
 
@@ -85,11 +85,7 @@ const Header: React.FC<HeaderProps> = ({ fixed }: HeaderProps) => {
 
             <MenuContainer open={menuOpen}>
                 <MenuItem>
-                    <MenuItemLink
-                        exact
-                        to="/"
-                        onClick={() => setMenuOpen(false)}
-                    >
+                    <MenuItemLink to="/" onClick={() => setMenuOpen(false)}>
                         Apps
                     </MenuItemLink>
                 </MenuItem>
@@ -103,7 +99,6 @@ const Header: React.FC<HeaderProps> = ({ fixed }: HeaderProps) => {
                 </MenuItem>
                 <MenuItem>
                     <MenuItemLink
-                        exact
                         to="/terms"
                         onClick={() => setMenuOpen(false)}
                     >

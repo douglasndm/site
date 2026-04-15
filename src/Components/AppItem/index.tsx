@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 import { useThemeMode } from '../../Contexts/ThemeContext';
 import appStoreLight from '../../Assets/Images/Stores/AppStore/PT-BR/Light.svg';
@@ -72,7 +72,7 @@ const AppItem: React.FC<Props> = ({
                     <DetailVisual>
                         <LogoHalo accentColor={App.backgroundColor} />
                         <AppLogo
-                            src={`${process.env.PUBLIC_URL}/${logo}`}
+                            src={logo.replace('./', '/')}
                             borderRadius={borderRadius}
                             alt={`Logo do app ${name}`}
                         />
@@ -120,7 +120,7 @@ const AppItem: React.FC<Props> = ({
             <CardHeader>
                 <Link to={`/app/${friendlyPackageName}`}>
                     <AppLogo
-                        src={`${process.env.PUBLIC_URL}/${logo}`}
+                        src={logo.replace('./', '/')}
                         borderRadius={borderRadius}
                         alt={`Logo do app ${name}`}
                     />
