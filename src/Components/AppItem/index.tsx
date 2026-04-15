@@ -4,8 +4,7 @@ import { Link } from 'react-router';
 import { useThemeMode } from '../../Contexts/ThemeContext';
 import appStoreLight from '../../Assets/Images/Stores/AppStore/PT-BR/Light.svg';
 import appStoreDark from '../../Assets/Images/Stores/AppStore/PT-BR/Dark.svg';
-import microsoftStoreBadge from '../../Assets/Images/Stores/MicrosoftStore/Portuguese-Brazilian_get it from MS_864X312.svg';
-import googlePlayBadge from '../../Assets/Images/Stores/GooglePlay/google-play-badge.png';
+import googlePlayBadge from '../../Assets/Images/Stores/GooglePlay/GetItOnGooglePlay_Badge_Web_color_Portuguese-Brazil.svg';
 
 import {
     AppDescription,
@@ -41,27 +40,38 @@ const AppItem: React.FC<Props> = ({
         name,
         logo,
         description,
-        MSStore,
+        MSStoreID,
         AppStore,
         GooglePlay,
     } = App;
     const { themeMode } = useThemeMode();
 
+    const getMSStoreId = (url: string) => {
+        if (!url) return '';
+        const parts = url.split('/');
+        return parts[parts.length - 1];
+    };
+
+    const msStoreId = getMSStoreId(MSStoreID);
+
     const storeLinks = [
-        {
-            href: AppStore,
-            src: themeMode === 'dark' ? appStoreLight : appStoreDark,
-            alt: `Baixar ${name} na App Store`,
-        },
         {
             href: GooglePlay,
             src: googlePlayBadge,
             alt: `Baixar ${name} no Google Play`,
         },
         {
-            href: MSStore,
-            src: microsoftStoreBadge,
+            href: AppStore,
+            src: themeMode === 'dark' ? appStoreLight : appStoreDark,
+            alt: `Baixar ${name} na App Store`,
+        },
+        {
+            href: msStoreId
+                ? `https://get.microsoft.com/installer/download/${msStoreId}?referrer=appbadge`
+                : '',
+            src: 'https://get.microsoft.com/images/pt-br%20dark.svg',
             alt: `Baixar ${name} na Microsoft Store`,
+            isMS: true,
         },
     ].filter((store) => !!store.href);
 
@@ -89,8 +99,17 @@ const AppItem: React.FC<Props> = ({
 
                         <DetailActions>
                             <StoreButtons>
-                                {storeLinks.map((store) => (
-                                    <a key={store.alt} href={store.href}>
+                                {storeLinks.map((store: any) => (
+                                    <a
+                                        key={store.alt}
+                                        href={store.href}
+                                        target={store.isMS ? '_self' : '_blank'}
+                                        rel={
+                                            store.isMS
+                                                ? undefined
+                                                : 'noreferrer'
+                                        }
+                                    >
                                         <StoreBadge
                                             src={store.src}
                                             alt={store.alt}
@@ -135,8 +154,13 @@ const AppItem: React.FC<Props> = ({
             <AppDescription>{description}</AppDescription>
 
             <StoreButtons>
-                {storeLinks.map((store) => (
-                    <a key={store.alt} href={store.href}>
+                {storeLinks.map((store: any) => (
+                    <a
+                        key={store.alt}
+                        href={store.href}
+                        target={store.isMS ? '_self' : '_blank'}
+                        rel={store.isMS ? undefined : 'noreferrer'}
+                    >
                         <StoreBadge src={store.src} alt={store.alt} />
                     </a>
                 ))}

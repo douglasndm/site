@@ -7,7 +7,7 @@
         "logo": "./Assets/Images/Apps/expirychecker.png",
         "AppStore": "https://apps.apple.com/us/app/controle-de-validade/id1549418617",
         "GooglePlay": "https://play.google.com/store/apps/details?id=com.controledevalidade",
-        "MSStore": "",
+        "MSStoreID": "",
         "MoreInfoURL": "https://controledevalidades.com",
         "backgroundColor": "#14d48f",
         "textColor": "#FFFFFF",
@@ -21,7 +21,7 @@
         "logo": "./Assets/Images/Apps/teams.png",
         "AppStore": "https://apps.apple.com/us/app/validades-para-times/id1568936353",
         "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.expirychecker.business",
-        "MSStore": "",
+        "MSStoreID": "",
         "backgroundColor": "#5856d6",
         "textColor": "#FFFFFF",
         "tags": "validades, produtos, vencimentos, mercado, loja, vencido, produto, lojas, promotor, validade, produto vencimento, aplicativo para vencimentos, aplicativo para loja, aplicativo para controlar vencimentos"
@@ -34,7 +34,7 @@
         "logo": "./Assets/Images/Apps/nowplaying.png",
         "AppStore": "https://apps.apple.com/us/app/gamelog-now-playing/id6746947488",
         "GooglePlay": "",
-        "MSStore": "",
+        "MSStoreID": "",
         "backgroundColor": "#FC7FB6",
         "textColor": "#FFFFFF",
         "tags": "game, gamelog, video-games, playstation, xbox, nintendo, steam, pc gaming, jogos, tracker"
@@ -47,7 +47,7 @@
         "logo": "./Assets/Images/Apps/thepetgallery.png",
         "AppStore": "https://apps.apple.com/us/app/the-pet-gallery/id6733220011",
         "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.thepetgallery",
-        "MSStore": "",
+        "MSStoreID": "",
         "backgroundColor": "#f8cdb9",
         "textColor": "#FFF",
         "tags": "pet, dog, cachorro, gato, cat, gatinho, kitty, cachorrinho, adotar, doação"
@@ -60,7 +60,7 @@
         "logo": "./Assets/Images/Apps/JogoDaVelha.png",
         "AppStore": "https://apps.apple.com/us/app/tictactoe-multiplayers/id1577124505",
         "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.tictactoe",
-        "MSStore": "https://www.microsoft.com/store/apps/9WZDNCRCSMPN",
+        "MSStoreID": "9WZDNCRCSMPN",
         "backgroundColor": "#33B9DA",
         "textColor": "#FFF",
         "tags": "jogo da velha, jogo da velha multiplayer, jogo da velha para dois, jogo da velha amigos, jogo da velha online, jogo casual, jogo para familia, jogo de estratégia, tic tac toe, tic-tac-toe, tictactoe"
@@ -73,7 +73,7 @@
         "logo": "./Assets/Images/Apps/tabuada.png",
         "AppStore": "https://apps.apple.com/us/app/aprenda-a-tabuada/id1550514551",
         "GooglePlay": "https://play.google.com/store/apps/details?id=com.rntabuada",
-        "MSStore": "https://www.microsoft.com/store/apps/9WZDNCRDXD7H",
+        "MSStoreID": "9WZDNCRDXD7H",
         "backgroundColor": "#00bfff",
         "textColor": "#fff",
         "tags": "tabuada, matematica, math, algebra, calculos, soma, subtração, multiplicação, divisão"
@@ -86,7 +86,7 @@
         "logo": "./Assets/Images/Apps/babsnation.png",
         "AppStore": "https://testflight.apple.com/join/p7VqUM8B",
         "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.flappybabs",
-        "MSStore": "https://www.microsoft.com/store/apps/9P2JMHC5DM9Q",
+        "MSStoreID": "9P2JMHC5DM9Q",
         "backgroundColor": "#FF02D6",
         "textColor": "#fff",
         "tags": "pain babs, barbara emely, babs, flappy bird, pain gaming, league of legends, mf, miss fortune"

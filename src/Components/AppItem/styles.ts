@@ -96,9 +96,12 @@ export const AppLogo = styled.img<LogoProps>`
     z-index: 1;
     width: clamp(5.25rem, 12vw, 7rem);
     height: clamp(5.25rem, 12vw, 7rem);
+    aspect-ratio: 1 / 1;
     border-radius: ${(props) => (props.borderRadius ? '32%' : '24px')};
-    object-fit: cover;
+    object-fit: contain;
+    background: ${({ theme }) => theme.colors.backgroundElevated};
     box-shadow: 0 18px 38px -24px ${({ theme }) => theme.colors.shadow};
+    flex-shrink: 0;
 `;
 
 export const MetaBadge = styled.span`
@@ -165,8 +168,9 @@ export const StoreButtons = styled.div`
 `;
 
 export const StoreBadge = styled.img`
-    height: 3.25rem;
+    height: 2.75rem;
     width: auto;
+    object-fit: contain;
     transition: transform 0.2s ease;
 
     &:hover {
