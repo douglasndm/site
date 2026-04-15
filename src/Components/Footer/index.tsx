@@ -1,10 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router';
 
-import { Container, Text } from './styles';
+import { Container, FooterLinks, FooterText, Text } from './styles';
 
 const Footer: React.FC = () => (
     <Container>
-        <Text>Made with 💜 in ReactJS.</Text>
+        <FooterText>
+            <Text>
+                Portfólio de apps com foco em utilidade, simplicidade e boa
+                experiência.
+            </Text>
+            <Text>Douglas Nunes de Mattos</Text>
+        </FooterText>
+
+        <FooterLinks>
+            <Link to="/">Apps</Link>
+            <Link to="/privacy">Privacidade</Link>
+            <Link to="/terms">Termos</Link>
+        </FooterLinks>
     </Container>
 );
 

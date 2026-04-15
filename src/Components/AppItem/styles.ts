@@ -1,258 +1,210 @@
-import styled from 'styled-components';
-
-import MSStoreButton from '../../Assets/Images/Stores/MicrosoftStore/Portuguese-Brazilian_get it from MS_864X312.svg';
-import AppStoreButton from '../../Assets/Images/Stores/AppStore/PT-BR/Dark.svg';
-import GooglePlayButton from '../../Assets/Images/Stores/GooglePlay/google-play-badge.png';
+import styled, { css } from 'styled-components';
 
 interface ContainerProps {
-    background: string;
+    accentColor: string;
+    variant: 'card' | 'hero';
 }
-
-export const Container = styled.div<ContainerProps>`
-    display: flex;
-    flex: 1;
-    background-color: ${(props) => props.background};
-
-    height: 100vh;
-
-    align-items: center;
-    justify-content: center;
-`;
-
-export const AppContainer = styled.div`
-    display: flex;
-    width: 95vw;
-
-    @media (max-width: 1250px) {
-        width: 95vw;
-    }
-
-    @media (max-width: 800px) {
-        width: 100vw;
-        padding-top: 5%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    @media (max-width: 800px) and (max-height: 500px) {
-        flex-direction: row;
-    }
-
-    @media (max-width: 400px) {
-        flex-direction: column;
-    }
-`;
 
 interface LogoProps {
     borderRadius?: boolean;
 }
 
-export const AppLogo = styled.img<LogoProps>`
-    width: 350px;
-    height: 350px;
-    border-radius: ${(props) => (props.borderRadius ? '50%' : 0)};
-    margin-right: 5%;
-
-    @media (max-width: 1300px) {
-        margin-right: 2%;
-    }
-    @media (max-width: 1000px) and (max-height: 600px) {
-        width: 240px;
-        height: 240px;
-        margin-right: 0;
-    }
-
-    @media (max-width: 800px) {
-        width: 215px;
-        height: 215px;
-    }
-
-    @media (max-width: 700px) {
-        width: 175px;
-        height: 175px;
-    }
-
-    @media (max-width: 400px) {
-        width: 150px;
-        height: 150px;
-    }
-`;
-
-export const TextContainer = styled.div`
-    width: 100%;
-    align-self: left;
-
-    @media (max-width: 1000px) {
-        width: 90%;
-
-        align-self: center;
-    }
-
-    @media (max-width: 700px) and (max-height: 400px) {
-        margin-top: 5%;
-    }
-`;
-
-export const DescriptionContainer = styled.div`
-    color: white;
-    font-size: 18px;
-
-    display: flex;
-    flex: 1;
-
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: left;
-
-    margin-left: 2%;
-
-    @media (max-width: 900px) {
-        margin-left: 0;
-    }
-`;
-
-interface TextProps {
-    color: string;
+interface HaloProps {
+    accentColor: string;
 }
 
-export const AppTitle = styled.h1<TextProps>`
-    font-size: 42px;
-    color: white;
-    font-weight: normal;
-    margin-bottom: 1%;
+export const Container = styled.article<ContainerProps>`
+    position: relative;
+    overflow: hidden;
+    border-radius: ${({ variant }) => (variant === 'hero' ? '32px' : '28px')};
+    border: 1px solid ${({ theme }) => theme.colors.border};
+    background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.04),
+            rgba(255, 255, 255, 0)
+        ),
+        ${({ theme }) => theme.colors.backgroundElevated};
+    box-shadow: 0 26px 70px -40px ${({ theme }) => theme.colors.shadow};
 
-    font-family: 'Roboto Condensed', sans-serif;
-
-    color: ${(props) => props.color};
-
-    @media (max-width: 1200px) {
-        text-align: center;
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(
+            135deg,
+            ${({ accentColor }) => `${accentColor}22`} 0%,
+            transparent 42%
+        );
     }
 
-    @media (max-width: 900px) {
-        font-size: 30px;
-        margin-bottom: 4%;
-    }
-
-    @media (max-width: 600px) {
-        font-size: 26px;
-    }
-
-    @media (max-width: 700px) and (max-height: 400px) {
-        font-size: 30px;
-        margin-bottom: 4%;
-    }
+    ${({ variant }) =>
+        variant === 'hero'
+            ? css`
+                  padding: clamp(1.4rem, 3vw, 2.25rem);
+              `
+            : css`
+                  padding: 1.4rem;
+                  height: 100%;
+              `}
 `;
 
-export const AppDescription = styled.p<TextProps>`
-    color: ${(props) => props.color};
-    font-family: 'Open Sans', sans-serif;
-
-    @media (max-width: 1200px) {
-        text-align: center;
-    }
-
-    @media (max-width: 600px) {
-        font-size: 16px;
-    }
-`;
-
-export const StoreButtonsContainer = styled.div`
-    margin-top: 2%;
-    align-items: center;
-    flex-direction: row;
+export const CardHeader = styled.div`
+    position: relative;
+    z-index: 1;
     display: flex;
+    align-items: center;
+    gap: 1rem;
+`;
 
-    @media (max-width: 1300px) {
-        justify-content: center;
-        align-content: center;
-    }
+export const DetailHero = styled.div`
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(240px, 360px) minmax(0, 1fr);
+    gap: clamp(1.5rem, 3vw, 3rem);
+    align-items: center;
 
-    @media (max-width: 1100px) {
-        flex-direction: column;
-        margin-top: 5%;
+    @media (max-width: 920px) {
+        grid-template-columns: 1fr;
     }
 `;
 
-export const ButtonDownload_MicrosoftStore = styled.img.attrs(() => ({
-    src: MSStoreButton,
-}))`
-    width: 200px;
-    height: 67px;
-    margin-right: 20px;
-    border-radius: 22px;
-
-    @media (max-width: 1200px) {
-        width: 190px;
-        height: 60px;
-        margin-right: 0;
-    }
+export const DetailVisual = styled.div`
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 320px;
+    padding: 2rem;
+    border-radius: 28px;
+    background: ${({ theme }) => theme.colors.overlay};
+    border: 1px solid ${({ theme }) => theme.colors.border};
 `;
 
-export const ButtonDownload_AppStore = styled.img.attrs(() => ({
-    src: AppStoreButton,
-}))`
-    width: 200px;
-    height: 75px;
-    margin-right: 20px;
-
-    @media (max-width: 1200px) {
-        width: 175px;
-        height: 55px;
-        margin-right: 0;
-    }
-
-    @media (max-width: 600px) {
-        width: 150px;
-        height: 50px;
-    }
+export const LogoHalo = styled.div<HaloProps>`
+    position: absolute;
+    width: 16rem;
+    height: 16rem;
+    border-radius: 999px;
+    background: ${({ accentColor }) => accentColor};
+    opacity: 0.2;
+    filter: blur(30px);
 `;
 
-export const ButtonDownload_GooglePlay = styled.img.attrs(() => ({
-    src: GooglePlayButton,
-}))`
-    width: 220px;
-    height: 95px;
-
-    @media (max-width: 1200px) {
-        width: 190px;
-        height: 80px;
-        margin-right: 0;
-    }
-
-    @media (max-width: 600px) {
-        width: 173px;
-        height: 70px;
-    }
+export const AppLogo = styled.img<LogoProps>`
+    position: relative;
+    z-index: 1;
+    width: clamp(5.25rem, 12vw, 7rem);
+    height: clamp(5.25rem, 12vw, 7rem);
+    aspect-ratio: 1 / 1;
+    border-radius: ${(props) => (props.borderRadius ? '32%' : '24px')};
+    object-fit: contain;
+    background: ${({ theme }) => theme.colors.backgroundElevated};
+    box-shadow: 0 18px 38px -24px ${({ theme }) => theme.colors.shadow};
+    flex-shrink: 0;
 `;
 
-export const MoreInfoButton = styled.a`
-    background-color: rgba(0, 0, 0, 1);
-    padding: 21px 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    color: rgba(255, 255, 255, 1);
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.2s;
-    margin-left: 20px;
+export const MetaBadge = styled.span`
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    min-height: 2rem;
+    margin-bottom: 0.9rem;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid ${({ theme }) => theme.colors.border};
+    background: ${({ theme }) => theme.colors.overlay};
+    color: ${({ theme }) => theme.colors.textMuted};
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+`;
+
+export const AppTitle = styled.h2`
+    position: relative;
+    z-index: 1;
+    color: ${({ theme }) => theme.colors.text};
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(1.45rem, 3vw, 2.8rem);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+`;
+
+export const AppDescription = styled.p`
+    position: relative;
+    z-index: 1;
+    margin-top: 1rem;
+    color: ${({ theme }) => theme.colors.textMuted};
+    font-size: 1rem;
+    line-height: 1.75;
+`;
+
+export const DetailDescription = styled(AppDescription)`
+    max-width: 62ch;
+    font-size: 1.05rem;
+`;
+
+export const AppHighlight = styled.p`
+    position: relative;
+    z-index: 1;
+    margin-top: 1.15rem;
+    padding-left: 1rem;
+    border-left: 3px solid ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }) => theme.colors.text};
+    font-size: 0.98rem;
+    line-height: 1.7;
+`;
+
+export const StoreButtons = styled.div`
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.85rem;
+    margin-top: 1.3rem;
+`;
+
+export const StoreBadge = styled.img`
+    height: 2.75rem;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.2s ease;
 
     &:hover {
-        background-color: rgba(100, 100, 100, 1);
+        transform: translateY(-2px);
     }
+`;
 
-    @media (max-width: 1300px) {
-        margin-top: -5px;
-        padding: 18px 20px;
-        margin-left: 2px;
-        font-size: 14px;
-    }
+export const DetailActions = styled.div`
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-top: 1.4rem;
+`;
 
-    @media (max-width: 1100px) {
-        padding: 20px;
-        margin-left: 0;
+export const CardAction = styled.a`
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.9rem;
+    padding: 0.8rem 1rem;
+    border-radius: 999px;
+    border: 1px solid ${({ theme }) => theme.colors.borderStrong};
+    background: ${({ theme }) => theme.colors.backgroundStrong};
+    color: ${({ theme }) => theme.colors.text};
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease,
+        background 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        border-color: ${({ theme }) => theme.colors.primary};
     }
 `;

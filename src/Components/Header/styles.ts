@@ -1,153 +1,185 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import styled, { css } from 'styled-components';
+import { NavLink } from 'react-router';
 
 interface HeaderProps {
     fixed?: boolean;
 }
 
-export const Container = styled.div<HeaderProps>`
-    position: ${(props) => (props.fixed === false ? 'absolute' : 'fixed')};
-    width: 100vw;
+interface MenuProps {
+    open: boolean;
+}
 
-    padding: 2% 6%;
+export const Container = styled.div<HeaderProps>`
+    position: ${(props) => (props.fixed === false ? 'relative' : 'sticky')};
+    top: 0;
+    z-index: 20;
+    width: 100%;
+    padding: 1rem clamp(1rem, 2vw, 2rem) 0;
 
     a {
         text-decoration: none;
     }
-
-    @media (max-width: 1150px) {
-        padding: 2% 3% 0 3%;
-    }
-
-    @media (max-width: 1000px) and (max-height: 600px) {
-        justify-content: center;
-        padding: 2% 0 0 0;
-    }
-    @media (max-width: 800px) {
-        padding: 20px 0;
-        justify-content: center;
-    }
-
-    @media (max-width: 900px) {
-        justify-content: center;
-        padding: 2% 3%;
-    }
-
-    @media (max-width: 290px) {
-        display: none;
-    }
 `;
 
-export const HeaderContainer = styled.header`
+export const HeaderBar = styled.header`
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 1rem 1.25rem;
+    border: 1px solid ${({ theme }) => theme.colors.border};
+    background: ${({ theme }) => theme.colors.backgroundElevated};
+    backdrop-filter: blur(18px);
+    box-shadow: 0 22px 50px -30px ${({ theme }) => theme.colors.shadow};
+    border-radius: 24px;
 
-    @media (max-width: 450px) {
-        .canCollapse {
-            display: none;
-        }
-    }
-
-    @media (max-width: 1160px) {
-        flex-direction: column;
-        align-items: center;
+    @media (max-width: 720px) {
+        align-items: flex-start;
     }
 `;
 
 export const Logo = styled.img.attrs(() => ({
-    src: `${process.env.PUBLIC_URL}/Assets/Images/logo-horizontal.png`,
+    src: `/Assets/Images/logo-horizontal-stroke.png`,
 }))`
-    width: 468px;
-    height: 86px;
+    width: 3.25rem;
+    height: 3.25rem;
+    object-fit: contain;
+    border-radius: 1rem;
+    box-shadow: 0 14px 24px -18px ${({ theme }) => theme.colors.shadow};
+`;
 
-    @media (max-width: 1000px) {
-        width: 300px;
-        height: 55px;
-    }
+export const BrandLockup = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 0.95rem;
+    min-width: 0;
+`;
 
-    @media (max-width: 800px) {
-        width: 250px;
-        height: 46px;
+export const BrandTitle = styled.span`
+    display: block;
+    color: ${({ theme }) => theme.colors.text};
+    font-family: 'Sora', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+`;
+
+export const BrandSubtitle = styled.span`
+    display: block;
+    color: ${({ theme }) => theme.colors.textMuted};
+    font-size: 0.92rem;
+    margin-top: 0.2rem;
+
+    @media (max-width: 540px) {
+        display: none;
     }
 `;
 
-export const MenuContainer = styled.menu`
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 15px;
-    border-radius: 12px;
-    backdrop-filter: saturate(180%) blur(20px);
-    max-height: 60px;
-    align-items: center;
+export const NavActions = styled.div`
     display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-left: auto;
+`;
 
-    @-moz-document url-prefix() {
-        background-color: rgba(0, 0, 0, 0.85);
+const actionButton = css`
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    border: 1px solid ${({ theme }) => theme.colors.border};
+    background: ${({ theme }) => theme.colors.backgroundStrong};
+    color: ${({ theme }) => theme.colors.text};
+    font-size: 0.92rem;
+    font-weight: 700;
+    transition: transform 0.2s ease, border-color 0.2s ease,
+        background 0.2s ease;
+
+    &:hover {
+        transform: translateY(-1px);
+        border-color: ${({ theme }) => theme.colors.borderStrong};
     }
+`;
 
-    @media (max-width: 1000px) {
-        flex: 1;
-        text-align: center;
+export const ThemeToggle = styled.button`
+    ${actionButton}
+`;
+
+export const MenuButton = styled.button`
+    ${actionButton}
+    display: none;
+
+    @media (max-width: 900px) {
+        display: inline-flex;
     }
+`;
 
-    @media (max-height: 500px) {
-        margin-top: 2%;
+export const MenuContainer = styled.menu<MenuProps>`
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    max-width: 1180px;
+    margin: 0.85rem auto 0;
+    padding: 0.95rem 1.1rem;
+    border-radius: 22px;
+    border: 1px solid ${({ theme }) => theme.colors.border};
+    background: ${({ theme }) => theme.colors.backgroundElevated};
+    backdrop-filter: blur(18px);
+
+    @media (max-width: 900px) {
+        display: ${({ open }) => (open ? 'flex' : 'none')};
+        flex-direction: column;
+        align-items: stretch;
     }
 `;
 
 export const MenuItem = styled.span`
-    :first-child {
-        margin-right: 20px;
+    display: inline-flex;
+`;
+
+const menuLinkStyles = css`
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    color: ${({ theme }) => theme.colors.textMuted};
+    font-size: 0.95rem;
+    font-weight: 700;
+    transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+        color: ${({ theme }) => theme.colors.text};
+        background: ${({ theme }) => theme.colors.overlay};
+        transform: translateY(-1px);
     }
 
-    & + & {
-        margin-right: 20px;
-    }
-    :last-child {
-        margin-right: 0;
+    &.active {
+        background: ${({ theme }) => theme.gradients.hero};
+        color: ${({ theme }) => theme.colors.textOnAccent};
+        box-shadow: 0 20px 30px -24px ${({ theme }) => theme.colors.shadow};
     }
 
     @media (max-width: 900px) {
-        margin-right: 25px;
-    }
-
-    @media (max-width: 600px) {
-        :first-child {
-            margin-right: 10px;
-        }
-        & + & {
-            margin-right: 10px;
-        }
+        width: 100%;
+        justify-content: flex-start;
     }
 `;
 
-export const MenuItemLink = styled(Link)`
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-
-    @media (max-width: 800px) {
-        font-size: 18px;
-    }
+export const MenuItemLink = styled(NavLink)`
+    ${menuLinkStyles}
 `;
 
 export const MenuItemLinkExternal = styled.a.attrs(() => ({
     target: '_blank',
+    rel: 'noreferrer',
 }))`
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-
-    @media (max-width: 800px) {
-        font-size: 20px;
-    }
-
-    @media (max-width: 600px) {
-        font-size: 18px;
-    }
+    ${menuLinkStyles}
 `;

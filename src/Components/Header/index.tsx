@@ -1,56 +1,125 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useMemo, useState } from 'react';
+import { Link } from 'react-router';
+import { HiMoon, HiSun } from 'react-icons/hi2';
+
+import { useThemeMode } from '../../Contexts/ThemeContext';
 
 import {
+    BrandLockup,
+    BrandSubtitle,
+    BrandTitle,
     Container,
-    HeaderContainer,
+    HeaderBar,
     Logo,
+    MenuButton,
     MenuContainer,
     MenuItem,
     MenuItemLink,
     MenuItemLinkExternal,
+    NavActions,
+    ThemeToggle,
 } from './styles';
 
 interface HeaderProps {
     fixed?: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({ fixed }: HeaderProps) => (
-    <Container fixed={fixed}>
-        <HeaderContainer>
-            <Link to="/">
-                <Logo alt="douglasndm logo" />
-            </Link>
+const Header: React.FC<HeaderProps> = ({ fixed }: HeaderProps) => {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const { themeMode, toggleTheme } = useThemeMode();
 
-            <MenuContainer>
-                <MenuItem>
-                    <MenuItemLink to="/">apps</MenuItemLink>
-                </MenuItem>
-                <MenuItem>
-                    <MenuItemLink to="/privacy">privacidade</MenuItemLink>
-                </MenuItem>
-                <MenuItem>
-                    <MenuItemLink to="/terms">termos</MenuItemLink>
-                </MenuItem>
-                <MenuItem>
-                    <MenuItemLinkExternal href="https://www.linkedin.com/in/douglasndm/">
-                        linkedin
-                    </MenuItemLinkExternal>
-                </MenuItem>
-                <MenuItem className="canCollapse">
-                    <MenuItemLinkExternal href="https://github.com/douglasndm">
-                        github
-                    </MenuItemLinkExternal>
-                </MenuItem>
+    const externalLinks = useMemo(
+        () => [
+            {
+                href: 'https://www.linkedin.com/in/douglasndm/',
+                label: 'LinkedIn',
+            },
+            {
+                href: 'https://github.com/douglasndm',
+                label: 'GitHub',
+            },
+            {
+                href: 'https://bsky.app/profile/douglasndm.dev',
+                label: 'Bluesky',
+            },
+        ],
+        []
+    );
 
-                <MenuItem className="canCollapse">
-                    <MenuItemLinkExternal href="https://bsky.app/profile/douglasndm.dev">
-                        bluesky
-                    </MenuItemLinkExternal>
+    return (
+        <Container fixed={fixed}>
+            <HeaderBar>
+                <Link to="/" onClick={() => setMenuOpen(false)}>
+                    <BrandLockup>
+                        <Logo alt="douglasndm logo" />
+                        <div>
+                            <BrandTitle>douglasndm.dev</BrandTitle>
+                            <BrandSubtitle>
+                                apps independentes, úteis e com personalidade
+                            </BrandSubtitle>
+                        </div>
+                    </BrandLockup>
+                </Link>
+
+                <NavActions>
+                    <ThemeToggle
+                        type="button"
+                        onClick={toggleTheme}
+                        aria-label={`Ativar tema ${
+                            themeMode === 'light' ? 'escuro' : 'claro'
+                        }`}
+                    >
+                        {themeMode === 'light' ? (
+                            <HiMoon size={20} />
+                        ) : (
+                            <HiSun size={20} />
+                        )}
+                    </ThemeToggle>
+
+                    <MenuButton
+                        type="button"
+                        aria-label="Abrir menu"
+                        onClick={() =>
+                            setMenuOpen((currentState) => !currentState)
+                        }
+                    >
+                        Menu
+                    </MenuButton>
+                </NavActions>
+            </HeaderBar>
+
+            <MenuContainer open={menuOpen}>
+                <MenuItem>
+                    <MenuItemLink to="/" onClick={() => setMenuOpen(false)}>
+                        Apps
+                    </MenuItemLink>
                 </MenuItem>
+                <MenuItem>
+                    <MenuItemLink
+                        to="/privacy"
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        Privacidade
+                    </MenuItemLink>
+                </MenuItem>
+                <MenuItem>
+                    <MenuItemLink
+                        to="/terms"
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        Termos
+                    </MenuItemLink>
+                </MenuItem>
+                {externalLinks.map((link) => (
+                    <MenuItem key={link.href}>
+                        <MenuItemLinkExternal href={link.href}>
+                            {link.label}
+                        </MenuItemLinkExternal>
+                    </MenuItem>
+                ))}
             </MenuContainer>
-        </HeaderContainer>
-    </Container>
-);
+        </Container>
+    );
+};
 
 export default Header;

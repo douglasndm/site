@@ -1,61 +1,53 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    background-color: #710ad1;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
+    min-height: 100vh;
 `;
 
-export const Content = styled.div`
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+export const Content = styled.main`
+    max-width: 1180px;
+    min-height: calc(100vh - 8rem);
+    margin: 0 auto;
+    padding: 1.25rem 1rem 3rem;
+    display: grid;
+    place-items: center;
 `;
 
-export const TextContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 0 5%;
-    border-radius: 15px;
+export const TextContainer = styled.section`
+    width: min(100%, 760px);
+    padding: clamp(1.5rem, 3vw, 2.8rem);
+    border-radius: 34px;
+    border: 1px solid ${({ theme }) => theme.colors.border};
+    background: ${({ theme }) => theme.colors.backgroundElevated};
+    box-shadow: 0 30px 70px -44px ${({ theme }) => theme.colors.shadow};
 `;
 
 export const TitleContainer = styled.div`
-    width: 15vw;
-    height: 50vh;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+    gap: 1rem;
 `;
 
 export const Title = styled.h1`
-    color: white;
-    font-size: 96px;
-    font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
-    margin-right: 5vw;
+    color: ${({ theme }) => theme.colors.text};
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(4rem, 14vw, 8rem);
+    line-height: 0.95;
+    letter-spacing: -0.08em;
 `;
 
 export const DescriptionContainer = styled.div`
-    width: 40vw;
-    height: 50vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    margin-top: 1.1rem;
 `;
 
 export const Description = styled.p`
-    color: white;
-    font-size: 22px;
-    font-family: 'Open Sans', sans-serif;
+    color: ${({ theme }) => theme.colors.textMuted};
+    font-size: 1rem;
+    line-height: 1.85;
 `;
 
 export const Link = styled.a`
-    color: white;
-    font-size: 22px;
-    font-family: 'Open Sans', sans-serif;
+    color: ${({ theme }) => theme.colors.primary};
+    font-weight: 800;
     text-decoration: none;
 `;

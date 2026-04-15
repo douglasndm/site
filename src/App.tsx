@@ -1,14 +1,27 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 
 import GlobalStyles from './Styles/Global';
+import { ThemeModeProvider, useThemeMode } from './Contexts/ThemeContext';
+import { themes } from './Styles/theme';
 
-import Routes from './Routes';
+import AppRoutes from './Routes';
+
+const AppContent: React.FC = () => {
+    const { themeMode } = useThemeMode();
+
+    return (
+        <ThemeProvider theme={themes[themeMode]}>
+            <GlobalStyles />
+            <AppRoutes />
+        </ThemeProvider>
+    );
+};
 
 const App: React.FC = () => (
-    <>
-        <GlobalStyles />
-        <Routes />
-    </>
+    <ThemeModeProvider>
+        <AppContent />
+    </ThemeModeProvider>
 );
 
 export default App;
