@@ -6,7 +6,7 @@ interface IApp {
     logo: string;
     AppStore: string;
     GooglePlay: string;
-    MSStore: string;
+    MSStoreID: string;
     MoreInfoURL?: string;
     tags: string;
 

@@ -19,8 +19,8 @@ const DirectLink: React.FC = () => {
             window.location.href = findedApp.GooglePlay;
         } else if (isIOS && !!findedApp.AppStore) {
             window.location.href = findedApp.AppStore;
-        } else if (isWindows && !!findedApp.MSStore) {
-            window.location.href = findedApp.MSStore;
+        } else if (isWindows && !!findedApp.MSStoreID) {
+            window.location.href = findedApp.MSStoreID;
         } else {
             window.location.href = `https://douglasndm.dev/app/${findedApp.id}`;
         }
