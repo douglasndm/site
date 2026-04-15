@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router';
+import { HiMoon, HiSun } from 'react-icons/hi2';
 
 import { useThemeMode } from '../../Contexts/ThemeContext';
 
@@ -68,7 +69,11 @@ const Header: React.FC<HeaderProps> = ({ fixed }: HeaderProps) => {
                             themeMode === 'light' ? 'escuro' : 'claro'
                         }`}
                     >
-                        <span>{themeMode === 'light' ? 'Dark' : 'Light'}</span>
+                        {themeMode === 'light' ? (
+                            <HiMoon size={20} />
+                        ) : (
+                            <HiSun size={20} />
+                        )}
                     </ThemeToggle>
 
                     <MenuButton
