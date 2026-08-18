@@ -12,4 +12,5 @@ interface IApp {
 
     backgroundColor: string;
     textColor: string;
+    logoIsWhite?: boolean;
 }

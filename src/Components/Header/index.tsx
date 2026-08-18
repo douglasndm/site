@@ -1,23 +1,19 @@
 import React, { useMemo, useState } from 'react';
-import { Link } from 'react-router';
-import { HiMoon, HiSun } from 'react-icons/hi2';
+import { Link, NavLink } from 'react-router';
+import { HiMoon, HiSun, HiBars3, HiXMark } from 'react-icons/hi2';
 
 import { useThemeMode } from '../../Contexts/ThemeContext';
 
 import {
-    BrandLockup,
-    BrandSubtitle,
-    BrandTitle,
     Container,
-    HeaderBar,
+    HeaderInner,
+    BrandLink,
     Logo,
-    MenuButton,
-    MenuContainer,
-    MenuItem,
-    MenuItemLink,
-    MenuItemLinkExternal,
+    NavMenu,
+    NavItemLink,
+    NavItemExternal,
     NavActions,
-    ThemeToggle,
+    IconButton,
 } from './styles';
 
 interface HeaderProps {
@@ -25,7 +21,7 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ fixed }: HeaderProps) => {
-    const [menuOpen, setMenuOpen] = useState(false);
+    const [mobileOpen, setMobileOpen] = useState(false);
     const { themeMode, toggleTheme } = useThemeMode();
 
     const externalLinks = useMemo(
@@ -48,76 +44,61 @@ const Header: React.FC<HeaderProps> = ({ fixed }: HeaderProps) => {
 
     return (
         <Container fixed={fixed}>
-            <HeaderBar>
-                <Link to="/" onClick={() => setMenuOpen(false)}>
-                    <BrandLockup>
-                        <Logo alt="douglasndm logo" />
-                        <div>
-                            <BrandTitle>douglasndm.dev</BrandTitle>
-                            <BrandSubtitle>
-                                apps independentes, úteis e com personalidade
-                            </BrandSubtitle>
-                        </div>
-                    </BrandLockup>
-                </Link>
+            <HeaderInner>
+                <BrandLink to="/" onClick={() => setMobileOpen(false)}>
+                    <Logo src="/Assets/Images/logo-horizontal.png" alt="douglasndm logo" />
+                </BrandLink>
+
+                <NavMenu open={mobileOpen}>
+                    <NavItemLink to="/" end onClick={() => setMobileOpen(false)}>
+                        Apps
+                    </NavItemLink>
+                    <NavItemLink to="/privacy" onClick={() => setMobileOpen(false)}>
+                        Privacidade
+                    </NavItemLink>
+                    <NavItemLink to="/terms" onClick={() => setMobileOpen(false)}>
+                        Termos
+                    </NavItemLink>
+                    {externalLinks.map((link) => (
+                        <NavItemExternal
+                            key={link.href}
+                            href={link.href}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            {link.label}
+                        </NavItemExternal>
+                    ))}
+                </NavMenu>
 
                 <NavActions>
-                    <ThemeToggle
+                    <IconButton
                         type="button"
                         onClick={toggleTheme}
                         aria-label={`Ativar tema ${
                             themeMode === 'light' ? 'escuro' : 'claro'
                         }`}
+                        title={`Alternar para tema ${
+                            themeMode === 'light' ? 'escuro' : 'claro'
+                        }`}
                     >
                         {themeMode === 'light' ? (
-                            <HiMoon size={20} />
+                            <HiMoon size={19} />
                         ) : (
-                            <HiSun size={20} />
+                            <HiSun size={19} />
                         )}
-                    </ThemeToggle>
+                    </IconButton>
 
-                    <MenuButton
+                    <IconButton
                         type="button"
-                        aria-label="Abrir menu"
-                        onClick={() =>
-                            setMenuOpen((currentState) => !currentState)
-                        }
+                        className="mobile-toggle"
+                        onClick={() => setMobileOpen((prev) => !prev)}
+                        aria-label="Toggle menu"
                     >
-                        Menu
-                    </MenuButton>
+                        {mobileOpen ? <HiXMark size={22} /> : <HiBars3 size={22} />}
+                    </IconButton>
                 </NavActions>
-            </HeaderBar>
-
-            <MenuContainer open={menuOpen}>
-                <MenuItem>
-                    <MenuItemLink to="/" onClick={() => setMenuOpen(false)}>
-                        Apps
-                    </MenuItemLink>
-                </MenuItem>
-                <MenuItem>
-                    <MenuItemLink
-                        to="/privacy"
-                        onClick={() => setMenuOpen(false)}
-                    >
-                        Privacidade
-                    </MenuItemLink>
-                </MenuItem>
-                <MenuItem>
-                    <MenuItemLink
-                        to="/terms"
-                        onClick={() => setMenuOpen(false)}
-                    >
-                        Termos
-                    </MenuItemLink>
-                </MenuItem>
-                {externalLinks.map((link) => (
-                    <MenuItem key={link.href}>
-                        <MenuItemLinkExternal href={link.href}>
-                            {link.label}
-                        </MenuItemLinkExternal>
-                    </MenuItem>
-                ))}
-            </MenuContainer>
+            </HeaderInner>
         </Container>
     );
 };

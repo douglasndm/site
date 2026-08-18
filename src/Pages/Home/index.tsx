@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router';
 
 import apps from '../../Data/Applications.json';
 
@@ -9,14 +8,10 @@ import AppItem from '../../Components/AppItem';
 import Footer from '../../Components/Footer';
 
 import {
-    AppGrid,
     Container,
-    ListItem,
     MainContent,
-    Section,
-    SectionHeader,
-    SectionText,
-    SectionTitle,
+    AppSectionList,
+    AppSectionItem,
 } from './styles';
 
 const Home: React.FC = () => {
@@ -33,27 +28,13 @@ const Home: React.FC = () => {
             <Header />
 
             <MainContent>
-                <Section>
-                    <SectionHeader>
-                        <div>
-                            <SectionTitle>Todos os aplicativos</SectionTitle>
-                            <SectionText>
-                                Explore utilitários, jogos casuais e apps de
-                                nicho publicados neste portfólio.
-                            </SectionText>
-                        </div>
-
-                        <Link to="/terms">Termos de uso</Link>
-                    </SectionHeader>
-
-                    <AppGrid>
-                        {apps.map((app: IApp) => (
-                            <ListItem key={app.name}>
-                                <AppItem App={app} />
-                            </ListItem>
-                        ))}
-                    </AppGrid>
-                </Section>
+                <AppSectionList>
+                    {apps.map((app: IApp) => (
+                        <AppSectionItem key={app.id}>
+                            <AppItem App={app} />
+                        </AppSectionItem>
+                    ))}
+                </AppSectionList>
             </MainContent>
 
             <Footer />
