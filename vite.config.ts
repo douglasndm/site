@@ -1,10 +1,9 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [react(), tsconfigPaths()],
+    plugins: [react()],
     server: {
         port: 3000,
     },
@@ -13,5 +12,8 @@ export default defineConfig({
     },
     define: {
         'process.env': {},
+    },
+    resolve: {
+        tsconfigPaths: true,
     },
 });
