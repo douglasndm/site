@@ -48,7 +48,8 @@ export const Logo = styled.img`
     height: 38px;
     width: auto;
     display: block;
-    transition: opacity 0.2s ease;
+    filter: ${({ theme }) => (theme.name === 'light' ? 'invert(1)' : 'none')};
+    transition: opacity 0.2s ease, filter 0.25s ease;
 
     @media (max-width: 600px) {
         height: 32px;
