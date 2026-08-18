@@ -5,23 +5,21 @@ import { useThemeMode } from '../../Contexts/ThemeContext';
 import appStoreLight from '../../Assets/Images/Stores/AppStore/PT-BR/Light.svg';
 import appStoreDark from '../../Assets/Images/Stores/AppStore/PT-BR/Dark.svg';
 import googlePlayBadge from '../../Assets/Images/Stores/GooglePlay/GetItOnGooglePlay_Badge_Web_color_Portuguese-Brazil.svg';
+import msStoreBadge from '../../Assets/Images/Stores/MicrosoftStore/Portuguese-Brazilian_get it from MS_864X312.svg';
 
 import {
-    AppDescription,
-    AppHighlight,
-    AppLogo,
-    AppTitle,
-    CardAction,
-    CardHeader,
     Container,
-    DetailActions,
-    DetailDescription,
-    DetailHero,
-    DetailVisual,
-    LogoHalo,
-    MetaBadge,
-    StoreBadge,
+    AppShowcaseContent,
+    LogoContainer,
+    AppLogo,
+    LogoGlow,
+    AppInfo,
+    AppTitle,
+    AppDescription,
     StoreButtons,
+    StoreBadge,
+    ActionButtons,
+    SecondaryButton,
 } from './styles';
 
 interface Props {
@@ -68,118 +66,64 @@ const AppItem: React.FC<Props> = ({
         {
             href: msStoreId
                 ? `https://get.microsoft.com/installer/download/${msStoreId}?referrer=appbadge`
+                : MSStoreID
+                ? msStoreBadge
                 : '',
-            src: 'https://get.microsoft.com/images/pt-br%20dark.svg',
+            src: msStoreBadge,
             alt: `Baixar ${name} na Microsoft Store`,
             isMS: true,
         },
     ].filter((store) => !!store.href);
 
-    if (variant === 'hero') {
-        return (
-            <Container accentColor={App.backgroundColor} variant={variant}>
-                <DetailHero>
-                    <DetailVisual>
-                        <LogoHalo accentColor={App.backgroundColor} />
-                        <AppLogo
-                            src={logo.replace('./', '/')}
-                            borderRadius={borderRadius}
-                            alt={`Logo do app ${name}`}
-                        />
-                    </DetailVisual>
-
-                    <div>
-                        <MetaBadge>{friendlyPackageName}</MetaBadge>
-                        <AppTitle>{name}</AppTitle>
-                        <DetailDescription>{description}</DetailDescription>
-                        <AppHighlight>
-                            Disponível nas principais lojas e com experiência
-                            pensada para uso rápido, direto e responsivo.
-                        </AppHighlight>
-
-                        <DetailActions>
-                            <StoreButtons>
-                                {storeLinks.map((store: any) => (
-                                    <a
-                                        key={store.alt}
-                                        href={store.href}
-                                        target={store.isMS ? '_self' : '_blank'}
-                                        rel={
-                                            store.isMS
-                                                ? undefined
-                                                : 'noreferrer'
-                                        }
-                                    >
-                                        <StoreBadge
-                                            src={store.src}
-                                            alt={store.alt}
-                                        />
-                                    </a>
-                                ))}
-                            </StoreButtons>
-
-                            {!!App.MoreInfoURL && (
-                                <CardAction
-                                    href={App.MoreInfoURL}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    Ver mais informações
-                                </CardAction>
-                            )}
-                        </DetailActions>
-                    </div>
-                </DetailHero>
-            </Container>
-        );
-    }
+    const logoUrl = logo.replace('./', '/');
 
     return (
         <Container accentColor={App.backgroundColor} variant={variant}>
-            <CardHeader>
-                <Link to={`/app/${friendlyPackageName}`}>
-                    <AppLogo
-                        src={logo.replace('./', '/')}
-                        borderRadius={borderRadius}
-                        alt={`Logo do app ${name}`}
-                    />
-                </Link>
+            <AppShowcaseContent variant={variant}>
+                <LogoContainer>
+                    <LogoGlow accentColor={App.backgroundColor} />
+                    <Link to={`/app/${friendlyPackageName}`}>
+                        <AppLogo
+                            src={logoUrl}
+                            borderRadius={borderRadius}
+                            alt={`Logo do app ${name}`}
+                        />
+                    </Link>
+                </LogoContainer>
 
-                <div>
-                    <MetaBadge>{friendlyPackageName}</MetaBadge>
-                    <AppTitle>{name}</AppTitle>
-                </div>
-            </CardHeader>
+                <AppInfo>
+                    <Link to={`/app/${friendlyPackageName}`}>
+                        <AppTitle>{name}</AppTitle>
+                    </Link>
 
-            <AppDescription>{description}</AppDescription>
+                    <AppDescription>{description}</AppDescription>
 
-            <StoreButtons>
-                {storeLinks.map((store: any) => (
-                    <a
-                        key={store.alt}
-                        href={store.href}
-                        target={store.isMS ? '_self' : '_blank'}
-                        rel={store.isMS ? undefined : 'noreferrer'}
-                    >
-                        <StoreBadge src={store.src} alt={store.alt} />
-                    </a>
-                ))}
-            </StoreButtons>
+                    <StoreButtons>
+                        {storeLinks.map((store) => (
+                            <a
+                                key={store.alt}
+                                href={store.href}
+                                target={store.isMS ? '_self' : '_blank'}
+                                rel={store.isMS ? undefined : 'noreferrer'}
+                            >
+                                <StoreBadge src={store.src} alt={store.alt} />
+                            </a>
+                        ))}
+                    </StoreButtons>
 
-            <DetailActions>
-                <Link to={`/app/${friendlyPackageName}`}>
-                    <CardAction as="span">Abrir detalhes</CardAction>
-                </Link>
-                {!!App.MoreInfoURL && (
-                    <CardAction
-                        href={App.MoreInfoURL}
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        Site do app
-                    </CardAction>
-                )}
-            </DetailActions>
+                    {!!App.MoreInfoURL && (
+                        <ActionButtons>
+                            <SecondaryButton
+                                href={App.MoreInfoURL}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Mais informações
+                            </SecondaryButton>
+                        </ActionButtons>
+                    )}
+                </AppInfo>
+            </AppShowcaseContent>
         </Container>
     );
 };

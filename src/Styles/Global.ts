@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
-    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
     :root {
         color-scheme: ${({ theme }) => theme.name};
@@ -21,40 +21,13 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        font-family: 'Manrope', sans-serif;
-        background: ${({ theme }) => theme.gradients.page};
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: ${({ theme }) => theme.colors.background};
         color: ${({ theme }) => theme.colors.text};
         overflow-x: hidden;
-        transition:
-            background 0.3s ease,
-            color 0.3s ease;
-    }
-
-    body::before,
-    body::after {
-        content: '';
-        position: fixed;
-        inset: auto;
-        width: 28rem;
-        height: 28rem;
-        border-radius: 999px;
-        pointer-events: none;
-        filter: blur(24px);
-        z-index: -1;
-        opacity: 0.6;
-    }
-
-    body::before {
-        top: -8rem;
-        left: -8rem;
-        background: ${({ theme }) => theme.gradients.glow};
-    }
-
-    body::after {
-        right: -10rem;
-        bottom: -12rem;
-        background: ${({ theme }) => theme.gradients.hero};
-        opacity: 0.2;
+        transition: background 0.25s ease, color 0.25s ease;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 
     a,
@@ -67,6 +40,7 @@ const GlobalStyles = createGlobalStyle`
 
     a {
         color: inherit;
+        text-decoration: none;
     }
 
     button {
@@ -82,7 +56,9 @@ const GlobalStyles = createGlobalStyle`
 
     ul,
     ol {
-        padding-left: 1.25rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
 
     ::selection {
