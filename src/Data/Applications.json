@@ -24,6 +24,7 @@
         "MSStoreID": "",
         "backgroundColor": "#5856d6",
         "textColor": "#FFFFFF",
+        "logoIsWhite": true,
         "tags": "validades, produtos, vencimentos, mercado, loja, vencido, produto, lojas, promotor, validade, produto vencimento, aplicativo para vencimentos, aplicativo para loja, aplicativo para controlar vencimentos"
     },
     {
@@ -37,6 +38,7 @@
         "MSStoreID": "",
         "backgroundColor": "#FC7FB6",
         "textColor": "#FFFFFF",
+        "logoIsWhite": true,
         "tags": "game, gamelog, video-games, playstation, xbox, nintendo, steam, pc gaming, jogos, tracker"
     },
     {

@@ -7,7 +7,28 @@ interface ContainerProps {
 
 interface LogoProps {
     borderRadius?: boolean;
+    logoIsWhite?: boolean;
+    accentColor?: string;
 }
+
+export const AppLogo = styled.img<LogoProps>`
+    position: relative;
+    z-index: 2;
+    width: clamp(100px, 15vw, 150px);
+    height: clamp(100px, 15vw, 150px);
+    aspect-ratio: 1 / 1;
+    border-radius: ${(props) => (props.borderRadius ? '50%' : '24px')};
+    object-fit: contain;
+    background: ${({ theme, logoIsWhite, accentColor }) =>
+        logoIsWhite ? accentColor || theme.colors.primary : theme.colors.backgroundElevated};
+    padding: ${({ logoIsWhite }) => (logoIsWhite ? '1rem' : '0')};
+    box-shadow: 0 10px 25px -8px ${({ theme }) => theme.colors.shadow};
+    transition: transform 0.25s ease;
+
+    &:hover {
+        transform: scale(1.04);
+    }
+`;
 
 interface GlowProps {
     accentColor: string;
@@ -67,22 +88,7 @@ export const LogoGlow = styled.div<GlowProps>`
     pointer-events: none;
 `;
 
-export const AppLogo = styled.img<LogoProps>`
-    position: relative;
-    z-index: 2;
-    width: clamp(100px, 15vw, 150px);
-    height: clamp(100px, 15vw, 150px);
-    aspect-ratio: 1 / 1;
-    border-radius: ${(props) => (props.borderRadius ? '50%' : '24px')};
-    object-fit: contain;
-    background: ${({ theme }) => theme.colors.backgroundElevated};
-    box-shadow: 0 10px 25px -8px ${({ theme }) => theme.colors.shadow};
-    transition: transform 0.25s ease;
 
-    &:hover {
-        transform: scale(1.04);
-    }
-`;
 
 export const AppInfo = styled.div`
     display: flex;

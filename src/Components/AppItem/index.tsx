@@ -86,6 +86,8 @@ const AppItem: React.FC<Props> = ({
                         <AppLogo
                             src={logoUrl}
                             borderRadius={borderRadius}
+                            logoIsWhite={App.logoIsWhite}
+                            accentColor={App.backgroundColor}
                             alt={`Logo do app ${name}`}
                         />
                     </Link>
