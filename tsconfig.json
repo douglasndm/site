@@ -1,7 +1,9 @@
 {
     "compilerOptions": {
-        "target": "ESNext",
-        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "target": "es2023",
+        "jsx": "react",
+        "module": "esnext",
+        "moduleResolution": "bundler",
         "allowJs": true,
         "skipLibCheck": true,
         "esModuleInterop": true,
@@ -9,12 +11,9 @@
         "strict": true,
         "forceConsistentCasingInFileNames": true,
         "noFallthroughCasesInSwitch": true,
-        "module": "ESNext",
-        "moduleResolution": "node",
         "resolveJsonModule": true,
         "isolatedModules": true,
         "noEmit": true,
-        "jsx": "react-jsx",
         "types": ["node"]
     },
     "include": ["src"]
