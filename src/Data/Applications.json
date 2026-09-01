@@ -28,6 +28,20 @@
         "tags": "validades, produtos, vencimentos, mercado, loja, vencido, produto, lojas, promotor, validade, produto vencimento, aplicativo para vencimentos, aplicativo para loja, aplicativo para controlar vencimentos"
     },
     {
+        "id": "72cc6bca-0234-44f9-98b5-14d7ba702676",
+        "friendlyPackageName": "deepvoid",
+        "name": "DeepVoid — Space Facts",
+        "description": "Explore o universo com DeepVoid, um guia claro e imersivo sobre ciência espacial.",
+        "logo": "./Assets/Images/Apps/deepvoid.png",
+        "AppStore": "",
+        "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.deepvoid",
+        "MSStoreID": "",
+        "backgroundColor": "#050A17",
+        "textColor": "#FFFFFF",
+        "logoIsWhite": true,
+        "tags": "espaço,astronomia,universo,cosmos,estação espacial,foguetes,asteroides,buracos negros,gravidade,NASA"
+    },
+    {
         "id": "4547ba40-6a75-4f9b-9079-6629ee4e8cad",
         "friendlyPackageName": "nowplaying",
         "name": "GameLog Now Playing",
