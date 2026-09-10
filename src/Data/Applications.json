@@ -33,7 +33,7 @@
         "name": "DeepVoid — Space Facts",
         "description": "Explore o universo com DeepVoid, um guia claro e imersivo sobre ciência espacial.",
         "logo": "./Assets/Images/Apps/deepvoid.png",
-        "AppStore": "",
+        "AppStore": "https://apps.apple.com/app/deepvoid-space-facts/id6757537334",
         "GooglePlay": "https://play.google.com/store/apps/details?id=dev.douglasndm.deepvoid",
         "MSStoreID": "",
         "backgroundColor": "#050A17",
