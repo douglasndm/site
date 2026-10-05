@@ -6,6 +6,7 @@ import { ThemeModeProvider, useThemeMode } from './Contexts/ThemeContext';
 import { themes } from './Styles/theme';
 
 import AppRoutes from './Routes';
+import ScrollToTop from './Components/ScrollToTop';
 
 const AppContent: React.FC = () => {
     const { themeMode } = useThemeMode();
@@ -13,6 +14,7 @@ const AppContent: React.FC = () => {
     return (
         <ThemeProvider theme={themes[themeMode]}>
             <GlobalStyles />
+            <ScrollToTop />
             <AppRoutes />
         </ThemeProvider>
     );

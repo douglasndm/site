@@ -42,6 +42,10 @@ const App: React.FC = () => {
     }, [app_id]);
 
     useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }, [app_id]);
+
+    useEffect(() => {
         document.title = `${app?.name} | douglasndm.dev`;
     }, [app]);
 
